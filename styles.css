@@ -227,3 +227,28 @@ nav ul li a:hover {
   background-position: center; /* Center the texture */
   background-repeat: no-repeat; /* Prevent the texture from repeating */
 }
+
+.Invoice h2 {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  padding-top: 80px;
+}
+
+.Invoice h3 {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 2px;
+  transition-duration: 0.2s;
+}
+
+.Invoice h3:hover {
+  scale: 105%;
+  cursor: pointer;
+}
