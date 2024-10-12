@@ -206,3 +206,24 @@ nav ul li a:hover {
       margin-bottom: 20px;
   }
 }
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.Invoice {
+  margin: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  height: 940px;
+  width: 400px;
+
+  border-radius: 4px;
+  box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.01), 0 0px 30px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+#invoice-div {
+  background-image: url('paper-texture.webp'); /* Path to your paper texture image */
+  background-size: cover; /* Ensures the texture covers the entire div */
+  background-position: center; /* Center the texture */
+  background-repeat: no-repeat; /* Prevent the texture from repeating */
+}

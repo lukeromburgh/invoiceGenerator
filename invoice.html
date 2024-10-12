@@ -21,7 +21,15 @@
         </nav>
 
         <div id="invoice-div" class="Invoice">
+            <h2>Graphic Design Invoice</h2>
 
+            <h3 onclick="changeName()" id="designerName">designer: name</h3>
+                <script>
+                    function changeName() {
+                        let name = prompt("What is your name?")
+                        document.getElementById("designerName").innerHTML = 'designer: ' + name;
+                    }
+                </script>
         </div>
     </body>
 </html>
