@@ -30,6 +30,31 @@
                         document.getElementById("designerName").innerHTML = 'designer: ' + name;
                     }
                 </script>
+
+            <h3 onclick="changeEmail()" id="email" >email@address.com</h3>
+            <script>
+                function changeEmail() {
+                let newEmail = prompt("What is your email?", "email@test.com")
+                document.getElementById("email").innerHTML = newEmail;
+                }
+            </script>
+
+            <h3 onclick="changeSocial()" id="social" >@social</h3>
+            <script>
+            function changeSocial() {
+            let newSocial = prompt("What is your @?")
+            document.getElementById("social").innerHTML = '@' + newSocial;
+            }
+            </script>
+
+
+            <h3 onclick="changeClientName()" id="clientName" class="newInvoiceGroup">client: name</h3>
+            <script>
+                function changeClientName() {
+                let newClient = prompt("What is your client's name?")
+                document.getElementById("clientName").innerHTML = 'client: ' + newClient;
+                }
+            </script>
         </div>
     </body>
 </html>
