@@ -1,3 +1,27 @@
+/*-----------------------------Animations---------------------------*/
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up-on-scroll {
+  animation: slideFadeIn linear;
+  animation-timeline: view(200px);
+}
+
+.features .features-content h2 {
+  animation: slideFadeIn linear;
+  animation-timeline: view(200px);
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
 .dm-sans {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
@@ -90,7 +114,6 @@ nav ul li a:hover {
 
 .btn-primary {
   appearance: button;
-  backface-visibility: hidden;
   background-color: #405cf5;
   border-radius: 6px;
   border-width: 0;
@@ -109,7 +132,6 @@ nav ul li a:hover {
   position: relative;
   text-align: center;
   text-transform: none;
-  transform: translateZ(0);
   transition: all .3s,box-shadow .08s ease-in;
   width: 100%;
 }
@@ -148,6 +170,10 @@ nav ul li a:hover {
 }
 
 /*-----------------------------------------------features-content----------------------------------------------------*/
+.features {
+  height: 100vh;
+}
+
 .features-content {
   display: flex;
   flex-direction: column;
@@ -163,6 +189,7 @@ nav ul li a:hover {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  line-height: 125%;
   font-style: normal;
   font-size: 24px;
   margin: 0 0 20px;

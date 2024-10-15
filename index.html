@@ -10,6 +10,23 @@
         
         <title>Design Quote Generator</title>
         <link rel=stylesheet href="styles.css">
+        
+        <script defer>
+            // JavaScript
+            const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+            if (elementsToFadeInUpOnScroll) {
+            window.addEventListener("scroll", function(event) {
+                elementsToFadeInUpOnScroll.forEach(function(element) {
+                if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+                    element.classList.add("fade-in-up");
+                } else {
+                    element.classList.remove("fade-in-up");
+                }
+                });
+            });
+            }
+        </script>
+
     </head>
     <body>
 
@@ -40,14 +57,15 @@
 
     <section class="features">
         <div class="features-content">
-            <h2 style="margin-top: 80px;">Tired of boring invoices? Send memorable, receipt-like invoices in a few clicks. Ideal for freelancers, creatives, and friends who want to make getting paid a bit more fun.</h2>
-            <a href="invoice.html">
+            <h2 class="fade-in-up-on-scroll" style="margin-top: 80px;">Tired of boring invoices? Send memorable, receipt-like invoices in a few clicks. Ideal for freelancers, creatives, and friends who want to make getting paid a bit more fun.</h2>
+            <a class="fade-in-up-on-scroll" href="invoice.html">
                 <button type="button" class="btn btn-primary">Try Now</button>
             </a>
         </div>
     </section>
+    
 
-        <p>
+        <p style="color: azure; padding-left: 10px;">
             Created by @lukedwsn
         </p>
 
