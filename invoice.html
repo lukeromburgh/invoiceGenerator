@@ -160,7 +160,32 @@
                         <h3>Thank you for your business!
                             Feel free to contact me for any further design needs.</h3>
                     </div>
+        </div>
 
+        <div class="buttons-container">
+            <button onclick="changePaper()" id="paperChangeButton" type="button" class="btn btn-primary btn-invoice">Change Paper Texture</button>
+            <script>
+                const paperTextureList = ["url('images/paper-texture.webp')", "url('images/paperTexture.jpeg')"
+                , "url('images/cardboard.webp')", "url('images/colorful.webp')", "url('images/envelope.webp')"
+                , "url('images/envelope2.webp')", "url('images/graffitti.webp')", "url('images/holes.webp')"
+                , "url('images/lined-paper.webp')", "url('images/paper-texture2.webp')", "url('images/paper-texture2.webp')"
+                , "url('images/paper-texture3.webp')", "url('images/receiptOld.webp')", "url('images/stickytape.webp')"]
+
+                let i = 0;
+
+                function changePaper() {
+                    if (i < paperTextureList.length) {
+                        i += 1;
+                        document.getElementById("invoice-div").style.backgroundImage = paperTextureList[i];
+                    }
+                    else {
+                        i = 0;
+                        document.getElementById("invoice-div").style.backgroundImage = paperTextureList[i];
+                    }
+                }
+            </script>
+            
+            <button type="button" class="btn btn-primary btn-invoice">Learn More</button>
         </div>
     </body>
 </html>
