@@ -296,3 +296,57 @@ nav ul li a:hover {
   scale: 105%;
   cursor: pointer;
 }
+
+.Invoice .newInvoiceGroup {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+#leftRightGroup {
+  display: flex;
+  justify-content: space-between; /* Distribute the two elements to opposite sides */
+  width: 100%; /* Make sure it stretches to the full width */
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#left {
+  text-align: left;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+#right {
+  text-align: left;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.Invoice .thankYou {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
