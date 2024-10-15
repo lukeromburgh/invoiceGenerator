@@ -10,11 +10,15 @@ body {
   margin: 0;
   padding: 0; 
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(#000000, #121212);
 }  
 
 nav {
-    background-color: white;
-    padding: 5px 10px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: white;
+  padding: 5px 10px;
 }
 
 nav ul {
@@ -39,72 +43,6 @@ nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
-/*
-
-.heroContent h1 {
-  text-align: left;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 40px;
-  margin-bottom: 0;
-}
-
-.heroContent p {
-  text-align: left;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 20px;
-}
-
-.mainBtn {
-  font-size: 14px;
-  width: 200px;
-  height: 50px;
-  margin: 10px;
-  background-color: rgb(185, 232, 85);
-  border-width: 3px;
-  border-radius: 10px;
-  border-color: black;
-  border-style: solid;
-  transition-duration: 0.2s;
-  margin-left: 0;
-  cursor: pointer;
-}
-
-.mainBtn:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(185, 232, 85);
-  scale: 105%;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1), 3px 3px 0 rgba(0, 0, 0, 1);
-}
-
-.heroSection {
-  margin-left: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
-  height: 80vh;
-  box-sizing: border-box;
-}
-
-.heroContent {
-  max-width: 50%;
-}
-
-.heroImg {
-  display: flex;
-  flex-direction: row;
-  width: 200px;
-  padding-right: 20%;
-} 
-
-*/
-
 .hero {
   display: flex;
   align-items: center;
@@ -115,18 +53,19 @@ nav ul li a:hover {
 }
 
 .hero-content {
-  max-width: 50%;
+  max-width: 40%;
+  padding-left: 100px;
 }
 
 .hero h1 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 48px;
   margin: 0 0 20px;
   background-color: #f3ec78;
-  background-image: linear-gradient(45deg, #000000, #5c5c5c , #202020);
+  background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -134,20 +73,14 @@ nav ul li a:hover {
   -moz-text-fill-color: transparent;
 }
 
-.hero h1 ::before {
-  -webkit-text-fill-color: linear-gradient(45deg, #f20085, #4a17a8 , #aaff00); 
-  filter: blur(1.5rem);
-  background-image: linear-gradient(45deg, #f20085, #4a17a8 , #aaff00);
-}
-
 .hero p {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 18px;
   margin: 0 0 30px;
-  color: #555;
+  color: #8d8d8d;
 }
 
 .hero-buttons {
@@ -155,44 +88,51 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-.btn {
-  padding: 15px 30px;
-  font-size: 14px;
-  color: black;
-  width: 200px;
-  height: 50px;
-  margin: 10px;
-  background-color: rgb(185, 232, 85);
-  border-width: 3px;
-  border-radius: 10px;
-  border-color: black;
-  border-style: solid;
-  transition-duration: 0.2s;
-  margin-left: 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 .btn-primary {
-  background-color: rgb(185, 232, 85);
-  color: #000000;
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 14px;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .3s,box-shadow .08s ease-in;
+  width: 100%;
 }
 
 .btn-primary:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(185, 232, 85);
-  scale: 105%;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1), 3px 3px 0 rgba(0, 0, 0, 1);
+  background-color: #5d75ff;
+  scale: 102%;
 }
 
 .hero-image {
   max-width: 25%; /* Adjust as needed */
+  padding-right: 100px;
 }
 
 .hero-image img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  transition-duration: 0.3s;
+}
+
+.hero-image :hover {
+  scale: 101%;
 }
 
 @media (max-width: 768px) {
@@ -206,6 +146,14 @@ nav ul li a:hover {
       margin-bottom: 20px;
   }
 }
+
+/*-----------------------------------------------features-content----------------------------------------------------*/
+
+
+
+
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 
