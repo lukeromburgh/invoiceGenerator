@@ -11,11 +11,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     </head>
-    <body style="background-color: rgb(252, 252, 252);">
+    <body style="background-color: rgb(255, 255, 255);">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#invoice">Invoice</a></li>
+                <li><a href="invoice.html">Invoice</a></li>
                 <li><a href="#pricing">Pricing</a></li>
             </ul>
         </nav>
@@ -55,6 +55,137 @@
                 document.getElementById("clientName").innerHTML = 'client: ' + newClient;
                 }
             </script>
+
+            <h3 onclick="changeDateTime()" id="dateTime" class="newInvoiceGroup">Tue 17/09/2024 - 01:43 PM</h3>
+            <script>
+                function changeDateTime() {
+                let Day = prompt("What day is it?");
+                let Month = prompt("What month is it?");
+                let Year = prompt("What year is it?");
+
+                    let newDate = Day + '/' + Month + '/' + Year;
+
+                document.getElementById("dateTime").innerHTML = newDate;
+                }
+            </script>
+
+            <h3 onclick="changePaymentDue()" id="dueDate">Payment Due: 12/10/2024</h3>
+            <script>
+                function changePaymentDue() {
+                let dDay = prompt("What day would you like payment by?");
+                let dMonth = prompt("What month would that be?");
+                let dYear = prompt("What year is it?");
+
+                    let newDueDate = dDay + '/' + dMonth + '/' + dYear;
+
+                document.getElementById("dueDate").innerHTML = "Payment Due: " + newDueDate;
+                }
+            </script>
+
+            <h3 class="newInvoiceGroup"> -- </h3>
+
+            <div id="leftRightGroup">
+                <h3 id="left">Invoice ID:</h3>
+                <h3 class="InvoiceIdNumber" id="right">#0053190</h3>
+            </div>
+
+            <div id="leftRightGroup">
+                <h3 id="left">Account Name:</h3>
+                <h3 class="accName" id="right">Name Surname</h3>
+            </div>
+
+            <div id="leftRightGroup">
+                <h3 id="left">Sort Code:</h3>
+                <h3 class="sortCode" id="right">00-00-00</h3>
+            </div>
+
+            <div id="leftRightGroup">
+                <h3 id="left">Account No.:</h3>
+                <h3 class="accNo" id="right">12345678</h3>
+            </div>
+
+            <h3 class="newInvoiceGroup"> -- </h3>
+
+            <div id="leftRightGroup">
+                <h3 onclick="changeName1()" class="item1Name" id="left">ITEM 1:</h3>
+                <h3 onclick="changeValue1()" class="item1Value" id="right">£150</h3>
+            </div>
+            <script>
+                function changeName1() {
+                let newItem = prompt("What would you like to call this item?")
+                document.getElementsByClassName("item1Name").innerHTML = newItem +':';
+                }
+            </script>
+
+            <script>
+                function changeValue1() {
+                let newValue = prompt("What would you like to call this item?")
+                getElementsByClassName(document, item1Value).innerHTML = '£' + newValue;
+                }
+            </script>
+
+            <div id="leftRightGroup">
+                <h3 onclick="changeName2()" class="item2Name" id="left">ITEM 2:</h3>
+                <h3 onclick="changeValue2()" class="item2Value" id="right">£3750</h3>
+            </div>
+
+            <div id="leftRightGroup">
+                <h3 onclick="changeName3()" class="item3Name" id="left">ITEM 3:</h3>
+                <h3 onclick="changeValue3()" class="item3Value" id="right">£75</h3>
+            </div>
+
+            <h3>-------------------------------------</h3>    
+            
+                    <div id="leftRightGroup">
+                        <h3 id="left">Subtotal:</h3>
+                        <h3 id="right">£3,975</h3>
+                    </div>
+
+                    <div id="leftRightGroup">
+                        <h3 id="left">Discount(0%):</h3>
+                        <h3 id="right">£0</h3>
+                    </div>
+
+                    <div id="leftRightGroup">
+                        <h3 id="left">VAT(14%):</h3>
+                        <h3 id="right">£556.50</h3>
+                    </div>
+
+                    <div id="leftRightGroup">
+                        <h3 id="left">TOTAL:</h3>
+                        <h3 id="right">£4,531.50</h3>
+                    </div>
+
+                    <div class="thankYou">
+                        <h3>Thank you for your business!
+                            Feel free to contact me for any further design needs.</h3>
+                    </div>
+        </div>
+
+        <div class="buttons-container">
+            <button onclick="changePaper()" id="paperChangeButton" type="button" class="btn btn-primary btn-invoice">Change Paper Texture</button>
+            <script>
+                const paperTextureList = ["url('images/paper-texture.webp')", "url('images/paperTexture.jpeg')"
+                , "url('images/cardboard.webp')", "url('images/colorful.webp')", "url('images/envelope.webp')"
+                , "url('images/envelope2.webp')", "url('images/graffitti.webp')", "url('images/holes.webp')"
+                , "url('images/lined-paper.webp')", "url('images/paper-texture2.webp')", "url('images/paper-texture2.webp')"
+                , "url('images/paper-texture3.webp')", "url('images/receiptOld.webp')", "url('images/stickytape.webp')"]
+
+                let i = 0;
+
+                function changePaper() {
+                    if (i < paperTextureList.length) {
+                        i += 1;
+                        document.getElementById("invoice-div").style.backgroundImage = paperTextureList[i];
+                    }
+                    else {
+                        i = 0;
+                        document.getElementById("invoice-div").style.backgroundImage = paperTextureList[i];
+                    }
+                }
+            </script>
+            
+            <button type="button" class="btn btn-primary btn-invoice">Learn More</button>
         </div>
     </body>
 </html>
