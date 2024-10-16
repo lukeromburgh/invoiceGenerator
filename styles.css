@@ -148,6 +148,13 @@ nav ul li a:hover {
 }
 
 /*-----------------------------------------------features-content----------------------------------------------------*/
+<<<<<<< Updated upstream
+=======
+.features {
+
+}
+
+>>>>>>> Stashed changes
 .features-content {
   display: flex;
   flex-direction: column;
@@ -175,8 +182,42 @@ nav ul li a:hover {
   -moz-text-fill-color: transparent;
 }
 
+.banner {
+  margin-top: 90px;
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+}
 
+.banner h2 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  line-height: 125%;
+  font-style: normal;
+  font-size: 140px;
+  color: #e6e6e6;
+}
 
+.banner h2 span {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  line-height: 125%;
+  font-style: normal;
+  font-size: 140px;
+  background-image: -webkit-linear-gradient(45deg, #405cf5, #6d40f5);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
 
 
 /*-------------------------------------------------------------------------------------------------------------------*/
