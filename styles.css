@@ -1,64 +1,17 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(70px);
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-300px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(300px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-
-@keyframes slideFadeIn {
-  from {
-    transform: translateX(-300px);
-  }
-  to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 .fade-in-item {
   animation: fadeIn;
-  animation-duration: 3s;
-}
-
-.slide-in-left {
-  animation: slideInLeft;
-  animation-duration: 1s;
-}
-
-.slide-in-right {
-  animation: slideInRight;
-  animation-duration: 1s;
-}
-
-h2 {
-  animation: slideFadeIn ease;
-  animation-timeline: view();
-}
-
-.slide-in {
-  animation: slideFadeIn ease;
-  animation-timeline: view();
-  animation-duration: 2s;
+  animation-duration: 1.2s;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
@@ -76,10 +29,11 @@ body {
   margin: 0;
   padding: 0; 
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(#000000, #121212);
+  background-image: linear-gradient(#0b0c11, #12121f);
 }  
 
 nav {
+  min-width: 100%;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -111,16 +65,18 @@ nav ul li a:hover {
 
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   padding: 50px;
   height: 90vh;
   box-sizing: border-box;
+  margin-bottom: 40vh;
 }
 
 .hero-content {
-  max-width: 40%;
-  padding-left: 100px;
+  max-width: 45%;
 }
 
 .hero h1 {
@@ -128,8 +84,8 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 48px;
-  margin: 0 0 20px;
+  font-size: 52px;
+  margin: 70px 0 20px 0px;
   background-color: #f3ec78;
   background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
   background-size: 100%;
@@ -150,8 +106,10 @@ nav ul li a:hover {
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 20px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 .btn-primary {
@@ -167,7 +125,6 @@ nav ul li a:hover {
   font-size: 14px;
   height: 44px;
   line-height: 1.15;
-  margin: 12px 0 0;
   outline: none;
   overflow: hidden;
   padding: 0 25px;
@@ -184,8 +141,7 @@ nav ul li a:hover {
 }
 
 .hero-image {
-  max-width: 25%; /* Adjust as needed */
-  padding-right: 100px;
+  max-width: 85%; /* Adjust as needed */
 }
 
 .hero-image img {
@@ -193,27 +149,28 @@ nav ul li a:hover {
   border-radius: 10px;
   object-fit: cover;
   transition-duration: 0.3s;
+  box-shadow: 0 -10px 65px rgba(42, 40, 181, 0.539); /* X offset, Y offset, blur radius, spread radius, color */
 }
 
 .hero-image :hover {
   scale: 101%;
 }
 
-@media (max-width: 768px) {
-  .hero {
-      flex-direction: column;
-      text-align: center;
-      height: auto;
-  }
-  .hero-content, .hero-image {
-      max-width: 100%;
-      margin-bottom: 20px;
-  }
+/*-----------------------------------------------features-content----------------------------------------------------*/
+.test {
+  height: 100vh;
+  background-color: #dee2f8;
+  overflow: hidden;
 }
 
-/*-----------------------------------------------features-content----------------------------------------------------*/
-.features {
+.test1 {
+  height: 100vh;
+  background-color: #4f54df;
+  overflow: hidden;
+}
 
+.features {
+  
 }
 
 .features-content {
@@ -246,6 +203,7 @@ nav ul li a:hover {
 
 .banner {
   margin-top: 90px;
+  margin-bottom: 200px;
   display: flex;
   height: 300px;
   flex-direction: column;
@@ -282,6 +240,97 @@ nav ul li a:hover {
 }
 
 
+/*-----------------------------------------------media queries--------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      align-content: center;
+      height: auto;
+  }
+  .hero-content, .hero-image {
+      max-height: 50vh;
+      margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+  
+  .hero p {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 0 0 30px;
+    color: #8d8d8d;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    position: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: left;
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+.hero h1 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin: 0 0 20px;
+  margin-top: 20px;
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.hero p {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0 0 30px;
+  color: #8d8d8d;
+}
+
+.hero-buttons {
+  max-width: 60%;
+}
+
+}
 
 
 
@@ -291,8 +340,8 @@ nav ul li a:hover {
   margin: auto;
   margin-bottom: 2%;
   text-align: center;
-  height: 940px;
-  width: 400px;
+  height: 80vh;
+  width: 320px;
 
   border-radius: 4px;
   box-shadow: 1px 10px 30px 0 rgb(0, 0, 0), 0 0px 30px 0 rgba(0, 0, 0, 0.1);
@@ -300,7 +349,7 @@ nav ul li a:hover {
 }
 
 #invoice-div {
-  margin-top: 100px;
+  margin-top: 40px;
   background-image: url('images/paper-texture.webp'); /* Path to your paper texture image */
   background-size: cover; /* Ensures the texture covers the entire div */
   background-position: center; /* Center the texture */
@@ -312,8 +361,8 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  padding-top: 80px;
+  font-size: 14px;
+  padding-top: 60px;
 }
 
 .Invoice h3 {
@@ -321,7 +370,7 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
   padding: 2px;
   transition-duration: 0.2s;
@@ -337,7 +386,7 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
   padding-top: 20px;
 }
@@ -350,7 +399,7 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   padding-top: 0;
   margin-top: 0;
 }
@@ -361,7 +410,7 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   padding-left: 30px;
 }
 
@@ -371,7 +420,7 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   padding-right: 30px;
 }
 
@@ -380,8 +429,9 @@ nav ul li a:hover {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
-  padding-top: 80px;
+  font-size: 12px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
 }
