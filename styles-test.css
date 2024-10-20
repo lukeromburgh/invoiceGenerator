@@ -1,0 +1,271 @@
+/*----------------------------------- Animations ----------------------------------------*/
+
+/* Defines a fade-in animation where elements start from 70px below and fade in with opacity */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(70px); /* Move the element 70px down */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Move element back to its original position */
+    }
+  }
+  
+  /* Apply the fade-in animation to elements with this class */
+  .fade-in-item {
+    animation: fadeIn; /* Apply the fadeIn keyframes */
+    animation-duration: 1.2s; /* Duration of the animation */
+  }
+  
+  /*---------------------------------- Typography ----------------------------------------*/
+  
+  /* Global style for the "DM Sans" font, commonly used for headings and text */
+  .dm-sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Normal weight */
+    font-style: normal; /* Standard text style */
+  }
+  
+  /*---------------------------------- Base Styles ----------------------------------------*/
+  
+  /* Resetting margin and padding for the body and setting background color */
+  body {
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; /* Fallback font stack */
+    background-color: #0B0C11; /* Dark background */
+  }
+  
+  /*---------------------------------- Navigation ----------------------------------------*/
+  
+  /* Sticky navigation bar at the top */
+  nav {
+    min-width: 100%; /* Ensures the nav spans full width */
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white; /* White background for contrast */
+    padding: 5px 10px;
+  }
+  
+  /* Styling the navigation menu */
+  nav ul {
+    list-style-type: none; /* Remove default bullets */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  /* Individual list items in the navigation */
+  nav ul li {
+    display: inline;
+  }
+  
+  /* Styling the links in the navigation */
+  nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Default color */
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+  
+  /* Hover effect for the navigation links */
+  nav ul li a:hover {
+    color: gray;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  /*---------------------------------- Hero Section --------------------------------------*/
+  
+  /* Hero section containing the main content and aligning items centrally */
+  .hero {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: space-between; /* Space between elements */
+    text-align: center; /* Center text */
+    padding: 50px;
+    height: 90vh;
+    box-sizing: border-box;
+    margin-bottom: 40vh; /* Spacing below the hero section */
+  }
+  
+  /* Limits the width of hero content for better readability */
+  .hero-content {
+    max-width: 45%; /* Constrain the width for readability */
+  }
+  
+  /* Styling for the main heading in the hero section */
+  .hero h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600; /* Slightly bold text */
+    font-size: 52px;
+    margin: 70px 0 20px 0px;
+    background-color: #f3ec78; /* Background gradient */
+    background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
+    background-clip: text; /* Applies gradient to text only */
+    -webkit-text-fill-color: transparent; /* Makes the background visible through text */
+  }
+  
+  /* Styling for the paragraph text in the hero section */
+  .hero p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300; /* Lighter font weight */
+    font-size: 18px;
+    margin: 0 0 30px;
+    color: #8d8d8d; /* Light gray text */
+  }
+  
+  /*---------------------------------- Hero Button Styles --------------------------------*/
+  
+  /* Container for buttons in the hero section */
+  .hero-buttons {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  /* Primary button styling */
+  .btn-primary {
+    appearance: button;
+    background-color: #405cf5; /* Blue background */
+    border-radius: 6px; /* Rounded corners */
+    border-width: 0; /* No border */
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0; /* Subtle shadows */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px;
+    height: 44px; /* Button height */
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    padding: 0 25px; /* Horizontal padding */
+    position: relative;
+    text-align: center; /* Center text */
+    text-transform: none;
+    outline: none;
+    line-height: 1.15;
+    overflow: hidden;
+    transition: all .3s, box-shadow .08s ease-in; /* Smooth transition for hover */
+    width: 100%; /* Full width button */
+  }
+  
+  /* Button hover effect */
+  .btn-primary:hover {
+    background-color: #5d75ff; /* Slightly brighter blue */
+    scale: 102%; /* Slightly enlarges the button on hover */
+  }
+  
+  /*---------------------------------- Hero Image Styles ---------------------------------*/
+  
+  /* Styling for the container holding the hero image */
+  .hero-image {
+    max-width: 85%; /* Constrain the width */
+  }
+  
+  /* Styling for the hero image itself */
+  .hero-image img {
+    width: 100%; /* Full width for the image */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure image covers the container */
+    transition-duration: 0.3s; /* Smooth transition effect */
+    box-shadow: 0 -10px 65px rgba(42, 40, 181, 0.539); /* Shadow around the image */
+  }
+  
+  /* Hover effect for the hero image */
+  .hero-image:hover {
+    scale: 101%; /* Slightly enlarge on hover */
+  }
+  
+  /*---------------------------------- Responsive Design --------------------------------*/
+  
+  /* Media query for screens up to 1278px wide */
+  @media (max-width: 1278px) {
+    .features-content h2 {
+      font-size: 20px;
+    }
+  
+    .banner {
+      max-width: 70%; /* Reducing banner width */
+    }
+  
+    .banner h2 {
+      font-size: 100px;
+    }
+  }
+  
+  /* Media query for screens up to 600px wide */
+  @media (max-width: 600px) {
+    .hero {
+      flex-direction: column; /* Stack hero content vertically */
+      align-content: center;
+      text-align: left; /* Align text to the left */
+      max-width: 90%; /* Reduce the width */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    /* Adjustments to hero content width */
+    .hero-content {
+      max-width: 90%;
+    }
+  
+    /* Reduce font size for the main hero heading */
+    .hero h1 {
+      font-size: 2.5rem; /* Responsive font size */
+    }
+  
+    /* Container for buttons is left-aligned in small screens */
+    .hero-buttons {
+      display: flex;
+      justify-content: flex-start; /* Align buttons to the left */
+      text-align: left; /* Align button text to the left */
+    }
+  
+    /* Button should not stretch full width on small screens */
+    .btn-primary {
+      width: auto; /* Button fits its content */
+    }
+  }
+  
+  /* Media query for screens up to 386px wide */
+  @media (max-width: 386px) {
+    .btn-primary {
+      margin-bottom: 1rem; /* Adds some spacing below the button */
+    }
+  }
+  
+  /*---------------------------------- Invoice Section -----------------------------------*/
+  
+  /* Container for the invoice section */
+  .Invoice {
+    margin: auto;
+    margin-bottom: 2%;
+    text-align: center;
+    height: 80vh;
+    width: 320px;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 1px 10px 30px 0 rgb(0, 0, 0), 0 0px 30px 0 rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  /* Background for invoice with a paper-like texture */
+  #invoice-div {
+    margin-top: 40px;
+    background-image: url('images/paper-texture.webp'); /* Background texture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Styling for the invoice headers */
+  .Invoice h2, .Invoice h3 {
+    font-family: "Kode Mono", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 60px;
+  }
+  
+  /* Hover effect for invoice subheaders */
+  .Invoice h3:hover {
+    scale: 105%; /* Enlarge on hover */
+    cursor: pointer;
+  }
+  
