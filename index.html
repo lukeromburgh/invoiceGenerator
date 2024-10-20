@@ -11,6 +11,23 @@
         <title>Design Quote Generator</title>
         <link rel=stylesheet href="styles.css">
 
+        <script>
+            function updateButtonText() {
+              const button = document.querySelector('.CTA');
+              
+              if (window.innerWidth <= 620) {
+                button.textContent = 'Start Free'; // Change text for small screens
+              } else {
+                button.textContent = 'Start Free — Create Your First Receipt in Seconds'; // Revert text for larger screens
+              }
+            }
+          
+            // Run function on window resize and initial load
+            window.addEventListener('resize', updateButtonText);
+            window.addEventListener('load', updateButtonText);
+          </script>
+          
+
     </head>
     <body>
 
@@ -30,7 +47,7 @@
 
             <div class="hero-buttons fade-in-item">
                 <a href="invoice.html">
-                    <button type="button" class="btn btn-primary fade-in-item slide-in-left">Start Free — Create Your First Receipt in Seconds</button>
+                    <button type="button" class="CTA btn btn-primary fade-in-item slide-in-left">Start Free — Create Your First Receipt in Seconds</button>
                 </a>
             </div>
         </div>
@@ -41,7 +58,7 @@
 
     <section class="features">
         <div class="features-content">
-            <h2 style="">Tired of boring invoices? Send memorable, receipt-like invoices in a few clicks. Ideal for freelancers, creatives, and friends who want to make getting paid a bit more fun.</h2>
+            <h2>Tired of boring invoices? Send memorable, receipt-like invoices in a few clicks. Ideal for freelancers, creatives, and friends who want to make getting paid a bit more fun.</h2>
             <a href="invoice.html">
                 <button type="button" class="btn btn-primary">Try Now</button>
             </a>

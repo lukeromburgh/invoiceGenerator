@@ -463,6 +463,54 @@ nav ul li a:hover {
   max-width: 60%;
 }
 
+.features {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.features-content {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+  padding: 10px;
+  max-width: 90%;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start; /* Aligns button to the left */
+  align-items: center;
+  text-align: left; /* Ensures button content is left-aligned */
+  width: 100%; /* Make sure the container takes up the full width */
+}
+
+.btn-primary {
+  min-width: auto; /* Adjust this value as needed */
+  text-align: left; /* Ensure text inside the button is left-aligned */
+}
+
+.btn-primary {
+  text-align: left;
+  width: auto; /* Keep the button from stretching full-width */
+  margin-left: 0;
+}
+
+.features-content h2 {
+  font-size: 18px;
+  align-items: left;
+  align-content: left;
+  text-align: left;
+}
+
+.features-content button {
+  align-items: left;
+  align-content: left;
+  text-align: left;
+  max-width: 100%;
+}
+
 }
 
 @media (max-width: 386px) {
