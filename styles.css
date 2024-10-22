@@ -47,6 +47,15 @@ nav {
   overflow: hidden;
   background-color: white;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 20px;
+  width:fit-content;
+  margin-left: 20px;
 }
 
 nav ul {
@@ -170,7 +179,7 @@ nav ul li a:hover {
 
 /*-----------------------------------------------features-content----------------------------------------------------*/
 .feature-list {
-  height: 200vh;
+  height: 180vh;
   background-color: #ffffff;
   overflow: hidden;
 }
@@ -229,6 +238,8 @@ nav ul li a:hover {
   height: 300px;
   background-image: linear-gradient(180deg, 
   #FFFFFF, 
+  #cacbf4, 
+  #8588d9,
   #4f54df);
 
 
@@ -426,7 +437,7 @@ nav ul li a:hover {
   
   .banner {
     max-width: 70%;
-    margin-top: 0;
+    margin-top: 70px;
   }
 
   .banner h2 {
@@ -544,10 +555,12 @@ nav ul li a:hover {
 
   .banner h2 {
     font-size: 60px;
+    font-weight: 500;
   }
 
   .banner h2 span {
     font-size: 60px;
+    font-weight: 500;
   }
 }
 
@@ -567,97 +580,163 @@ nav ul li a:hover {
     padding: 0;
   }
 
+  .hero h1 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+    margin-top: 20px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
 
+  .hero p {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 0 0 30px;
+    color: #8d8d8d;
+  }
 
-.hero h1 {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 2.5rem;
-  margin: 0 0 20px;
-  margin-top: 20px;
-  background-color: #f3ec78;
-  background-image: linear-gradient(45deg, #ffffff, #d2d2d2 , #ffffff);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
+  .hero-buttons {
+    max-width: 60%;
+  }
+
+  .features {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  .features-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: flex-start; /* Aligns button to the left */
+    align-items: center;
+    text-align: left; /* Ensures button content is left-aligned */
+    width: 100%; /* Make sure the container takes up the full width */
+  }
+
+  .btn-primary {
+    min-width: auto; /* Adjust this value as needed */
+    text-align: left; /* Ensure text inside the button is left-aligned */
+  }
+
+  .btn-primary {
+    text-align: left;
+    width: auto; /* Keep the button from stretching full-width */
+    margin-left: 0;
+  }
+
+  .features-content h2 {
+    font-size: 18px;
+    align-items: left;
+    align-content: left;
+    text-align: left;
+  }
+
+  .features-content button {
+    align-items: left;
+    align-content: left;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .gradient1, .gradient2 {
+    height: 75px;
+  }
+
+  #feature-one,  #feature-three {
+    flex-direction: column;
+  }
+
+  #feature-two {
+    flex-direction: column-reverse;
+  }
+
+  #feature-one .feature-one-image, #feature-two .feature-two-image, #feature-three .feature-three-image {
+    max-width: 70%;
+    border-radius: 10px 10px 10px 10px;
+    height: fit-content;
+  }
+
+  #feature-two {
+    margin-top: 25vh;
+  }
+
+  #feature-three {
+    margin-top: 6vh;
+  }
+
+  .feature-text-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 70%;
+  }
+
+  .feature-header {
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .feature-text {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
 }
 
-.hero p {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1rem;
-  margin: 0 0 30px;
-  color: #8d8d8d;
+@media (max-width: 432px) {
+  .banner h2 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .banner h2 span {
+    font-size: 40px;
+    font-weight: 400;
+  }
 }
 
-.hero-buttons {
-  max-width: 60%;
-}
+@media (max-width: 389px) {
+  .hero-content {
+    margin-bottom: 80px;
+  }
 
-.features {
-  margin: 0;
-  margin-left: 20px;
-  padding: 0;
-}
-
-.features-content {
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 0;
-  padding: 10px;
-  max-width: 90%;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: flex-start; /* Aligns button to the left */
-  align-items: center;
-  text-align: left; /* Ensures button content is left-aligned */
-  width: 100%; /* Make sure the container takes up the full width */
-}
-
-.btn-primary {
-  min-width: auto; /* Adjust this value as needed */
-  text-align: left; /* Ensure text inside the button is left-aligned */
-}
-
-.btn-primary {
-  text-align: left;
-  width: auto; /* Keep the button from stretching full-width */
-  margin-left: 0;
-}
-
-.features-content h2 {
-  font-size: 18px;
-  align-items: left;
-  align-content: left;
-  text-align: left;
-}
-
-.features-content button {
-  align-items: left;
-  align-content: left;
-  text-align: left;
-  max-width: 100%;
-}
-
-.gradient1, .gradient2 {
-  height: 75px;
-}
-
+  .hero-image {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 386px) {
   .btn-primary {
     margin-bottom: 1rem;
   }
+
+
 }
 
 
