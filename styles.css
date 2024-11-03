@@ -184,7 +184,7 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-.test1 {
+.social-proof {
   height: 100vh;
   background-color: #4f54df;
   overflow: hidden;
@@ -426,6 +426,120 @@ nav ul li a:hover {
   border-color: #6872836d;
 }
 
+/*----------------------------------------------------Slider-----------------------------------------------*/
+/* Slider Container */
+.slider h2 {
+  text-align: center;
+  justify-self: center;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: #CFD5E3;
+  padding-bottom: 20px;
+}
+
+.slider {
+  padding-top: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #4f54df;
+}
+
+/* Slide Track */
+.slide-track {
+  display: flex;
+  width: calc(250px * 10); /* 10 logos in total */
+  animation: scroll 20s linear infinite; /* Infinite scrolling */
+}
+
+/* Each Slide */
+.slide {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto; /* Adjust the logo size */
+  height: 22px;
+  filter: opacity(0.5);
+  filter: grayscale(100%); /* Optional: Make logos grayscale */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.slide img:hover {
+  transform: scale(1.2);
+  filter: none; /* Return to original color on hover */
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/*--------------------------------------------Review Cards------------------------------------------------------*/
+
+.social-proof h2 {
+    text-align: center;
+    justify-self: center;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #CFD5E3;
+    padding: 40px 0px
+}
+
+.review-card {
+  background-color: #FDFDFE;
+  border: 2px solid #B1BACF;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
+  height: 400px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile {
+  position: flex;
+  flex-direction: row;
+}
+
+.review-image {
+  float: left;
+  border-radius: 50%;
+  height: 80px;
+  width: auto;
+}
+
+.review-image img {
+  size: 150%;
+  object-fit: cover;
+}
+
+.review-name {
+    float: right;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #1d1d1d;
+}
 
 /*-----------------------------------------------media queries--------------------------------------------------------*/
 @media (max-width: 1278px) {
