@@ -517,6 +517,7 @@ nav ul li a:hover {
 .profile {
   position: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 .review-image {
