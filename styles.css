@@ -512,6 +512,9 @@ nav ul li a:hover {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .profile {
@@ -521,6 +524,8 @@ nav ul li a:hover {
 }
 
 .review-image {
+  margin-top: 20px;
+  margin-left: 20px;
   float: left;
   border-radius: 50%;
   height: 80px;
@@ -533,13 +538,32 @@ nav ul li a:hover {
 }
 
 .review-name {
-    float: right;
+    margin-left: 20px;
+    margin-top: 50px;
+    float: left;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
     color: #1d1d1d;
+}
+
+.stars {
+  height: 30px;
+  width: auto;
+}
+
+.review-paragraph {
+    margin-left: 20px;
+    margin-top: 50px;
+    float: left;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 17px;
+    color: #000000;
 }
 
 /*-----------------------------------------------media queries--------------------------------------------------------*/
