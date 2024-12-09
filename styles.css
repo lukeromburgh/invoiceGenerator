@@ -508,12 +508,13 @@ nav ul li a:hover {
   border: 2px solid #B1BACF;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
-  height: 400px;
-  width: 50%;
+  height: 420px;
+  width: 46%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
 }
 
@@ -550,20 +551,109 @@ nav ul li a:hover {
 }
 
 .stars {
-  height: 30px;
+  height: 80px;
   width: auto;
+  margin-bottom: 0;
+  margin-left: 24px;
 }
 
 .review-paragraph {
-    margin-left: 20px;
-    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 0;
     float: left;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     font-size: 17px;
     color: #000000;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px 10px;
+}
+
+.footer-about h4,
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #abd8ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #7edad6;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 0.8rem;
+}
+
+.footer-bottom a {
+  color: #abd8ff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #7edad6;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
 }
 
 /*-----------------------------------------------media queries--------------------------------------------------------*/
@@ -961,6 +1051,16 @@ nav ul li a:hover {
 }
 
 #right {
+  text-align: left;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  padding-right: 30px;
+}
+
+.right {
   text-align: left;
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
