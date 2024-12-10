@@ -283,6 +283,43 @@
             </script>
             
             <button type="button" class="btn btn-primary btn-invoice">Learn More</button>
+
+            <button onclick="sendInvoice()" class="btn btn-primary btn-invoice">Send Invoice</button>
+
+
+            <!---------------------------    EmailJS Scripts    ---------------------------------->
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+            <script>
+                // Initialize EmailJS
+                (function() {
+                    emailjs.init("service_nayof0a"); // Replace with your EmailJS user ID
+                })();
+
+                function sendInvoice() {
+                    // Collect invoice data from the page
+                    const invoiceData = {
+                        client_email: prompt("Enter the client's email:"),
+                        client_name: document.getElementById("clientName").textContent.replace("client: ", ""),
+                        your_name: document.getElementById("designerName").textContent.replace("designer: ", ""),
+                        invoice_id: document.querySelector(".InvoiceIdNumber").textContent,
+                        subtotal: document.getElementById("subtotal").textContent,
+                        total: document.getElementById("total").textContent,
+                    };
+
+                    // Send the email using the email template
+                    emailjs.send("service_nayof0a", "template_410k4yj", invoiceData)
+                        .then((response) => {
+                            alert("Invoice sent successfully!");
+                        })
+                        .catch((error) => {
+                            alert("Failed to send the invoice. Please try again.");
+                            console.error("Error sending email:", error);
+                        });
+                }
+
+            </script>
+
         </div>
     </body>
 </html>
