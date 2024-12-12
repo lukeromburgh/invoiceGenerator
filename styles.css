@@ -993,22 +993,6 @@ nav ul li a:hover {
 
 }
 
-#invoice-div {
-  background: white !important; /* Force a white background for visibility */
-  color: black !important; /* Ensure text is visible */
-  display: block !important; /* Ensure it's visible */
-    -webkit-print-color-adjust: exact !important; /* Ensure colors are preserved */
-    print-color-adjust: exact !important; /* Ensure colors are preserved */
-    box-shadow: none !important; /* Remove shadows */
-    border: none !important; /* Remove borders */
-    transform: none !important; /* Avoid CSS transforms */
-    opacity: 1 !important; /* Ensure full opacity */
-    filter: none !important; /* Remove filters */
-
-
-}
-
-
 .Invoice h2 {
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;

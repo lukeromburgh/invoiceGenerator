@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        /*---------------------------------- Navigation ----------------------------------------*/
+
+        /* Sticky navigation bar at the top */
+        nav {
+        min-width: 100%;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        background-color: white;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .logo img {
+        height: 20px;
+        width:fit-content;
+        margin-left: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content:flex-end;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            padding: 10px 30px;
+        }
+
+        nav ul li a:hover {
+            color: gray;
+            transition: color 0.3s ease;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #020202;
+            color: #333;
+        }
+
+        .pricing-header {
+            
+            text-align: center;
+            padding: 50px;
+            background-color: #405cf5;
+            color: white;
+        }
+
+        .pricing-header h1 {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .pricing-header p {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pricing-card {
+            background-color: rgb(15, 15, 15);
+            border: 0.5px solid #a8a8a8;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .pricing-card h2 {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: #405cf5;
+        }
+
+        .pricing-card .price {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 2rem;
+            color: #dbdbdb;
+            margin: 10px 0;
+        }
+
+        .pricing-card .price span {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1rem;
+            color: #ebebeb;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .pricing-card ul li {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #dbdbdb;
+        }
+
+        .pricing-card ul li span {
+            color: rgb(13, 157, 13);
+            font-weight: bold;
+        }
+
+        .pricing-card ul li span.unavailable {
+            color: red;
+        }
+
+        .pricing-card button {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            background-color: #405cf5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pricing-card button:hover {
+            background-color: #5d75ff;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="logo of slipstream">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <div class="pricing-header">
+        <h1>Choose Your Plan</h1>
+        <p>Select a pricing plan that fits your needs. Upgrade anytime.</p>
+    </div>
+
+    <div class="pricing-container">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <p class="price">$9.99 <span>/month</span></p>
+            <ul>
+                <li><span>✔</span> Create Unlimited Invoices</li>
+                <li><span>✔</span> Custom Backgrounds</li>
+                <li><span class="unavailable">✖</span> Payment Tracking</li>
+                <li><span class="unavailable">✖</span> Priority Support</li>
+            </ul>
+            <button>Get Started</button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-card">
+            <h2>Pro</h2>
+            <p class="price">$19.99 <span>/month</span></p>
+            <ul>
+                <li><span>✔</span> Create Unlimited Invoices</li>
+                <li><span>✔</span> Custom Backgrounds</li>
+                <li><span>✔</span> Payment Tracking</li>
+                <li><span class="unavailable">✖</span> Priority Support</li>
+            </ul>
+            <button>Choose Pro</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <p class="price">$29.99 <span>/month</span></p>
+            <ul>
+                <li><span>✔</span> Create Unlimited Invoices</li>
+                <li><span>✔</span> Custom Backgrounds</li>
+                <li><span>✔</span> Payment Tracking</li>
+                <li><span>✔</span> Priority Support</li>
+            </ul>
+            <button>Go Premium</button>
+        </div>
+    </div>
+
+</body>
+</html>
