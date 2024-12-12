@@ -990,7 +990,24 @@ nav ul li a:hover {
   background-size: cover; /* Ensures the texture covers the entire div */
   background-position: center; /* Center the texture */
   background-repeat: no-repeat; /* Prevent the texture from repeating */
+
 }
+
+#invoice-div {
+  background: white !important; /* Force a white background for visibility */
+  color: black !important; /* Ensure text is visible */
+  display: block !important; /* Ensure it's visible */
+    -webkit-print-color-adjust: exact !important; /* Ensure colors are preserved */
+    print-color-adjust: exact !important; /* Ensure colors are preserved */
+    box-shadow: none !important; /* Remove shadows */
+    border: none !important; /* Remove borders */
+    transform: none !important; /* Avoid CSS transforms */
+    opacity: 1 !important; /* Ensure full opacity */
+    filter: none !important; /* Remove filters */
+
+
+}
+
 
 .Invoice h2 {
   font-family: "Kode Mono", monospace;
@@ -1090,10 +1107,51 @@ nav ul li a:hover {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 36%;
+  max-width: 50%;
 }
 
 .btn-invoice {
   margin-inline: 20px;
   margin-bottom: 50px;
+}
+
+/* Styles for the pop-up container */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+}
+
+/* Styles for the pop-up overlay */
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  z-index: 999;
+}
+
+/* Button to close the pop-up */
+#popup button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0B0C11;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup button:hover {
+  background-color: #444;
 }

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Design Quote Generator</title>
@@ -282,13 +288,107 @@
                 }
             </script>
             
-            <button type="button" class="btn btn-primary btn-invoice">Learn More</button>
+            <button onclick="showPopup()" type="button" class="btn btn-primary btn-invoice">Learn More</button>
+
+             <!-- Pop-up overlay -->
+    <div id="popup-overlay" onclick="hidePopup()"></div>
+
+    <!-- Pop-up container -->
+    <div id="popup">
+        <h2>How to Use the Invoice Generator</h2>
+        <p>
+            Welcome to the Invoice Generator! Here's a quick guide:
+        </p>
+        <ol>
+            <li>Click on any text (e.g., Designer Name, Client Name) to edit it.</li>
+            <li>Use the buttons to change the paper texture or send the invoice.</li>
+            <li>Ensure all fields are filled out, including items and totals, before sending.</li>
+            <li>Click "Send Invoice" to email the completed invoice to your client.</li>
+        </ol>
+        <p>Thank you for using our tool!</p>
+        <button onclick="hidePopup()">Close</button>
+    </div>
+
+    <!-- JavaScript for handling the pop-up -->
+    <script>
+        // Show the pop-up
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popup-overlay").style.display = "block";
+        }
+
+        // Hide the pop-up
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popup-overlay").style.display = "none";
+        }
+    </script>
 
             <button onclick="sendInvoice()" class="btn btn-primary btn-invoice">Send Invoice</button>
 
+            <button onclick="saveInvoice()" id="saveInvoiceButton" class="btn btn-primary btn-invoice">Save Invoice</button>
+
+
+            <script>
+                async function saveInvoice() {
+                    // Import jsPDF library
+                    const { jsPDF } = window.jspdf;
+            
+                    // Initialize jsPDF instance
+                    const pdf = new jsPDF('p', 'mm', [320, 860]);  // Use A4 size paper (210mm x 297mm)
+            
+                    // Select the invoice div
+                    const invoiceDiv = document.getElementById("invoice-div");
+            
+                    // Capture the content and add it to the PDF
+                    await pdf.html(invoiceDiv, {
+                        callback: function (doc) {
+                            // Generate a filename for the invoice
+                            const fileName = `Invoice_${new Date().toISOString().slice(0, 10)}.pdf`;
+            
+                            // Save the PDF
+                            doc.save(fileName); // Prompts the user to download
+                        },
+                        x: 10,
+                        y: 10,
+                        width: 190,  // Width of the content in mm (adjust if necessary)
+                        scale: 1.0  // Adjust scale if necessary to fit the content (e.g., 0.8 for smaller content)
+                    });
+                }
+            </script>
+
+
 
             <!---------------------------    EmailJS Scripts    ---------------------------------->
-            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+            <script>
+                async function saveInvoice() {
+                    // Import jsPDF library
+                    const { jsPDF } = window.jspdf;
+
+                    // Initialize jsPDF instance
+                    const pdf = new jsPDF();
+
+                    // Select the invoice div
+                    const invoiceDiv = document.getElementById("invoice-div");
+
+                    // Add the invoice div content to the PDF
+                    await pdf.html(invoiceDiv, {
+                        callback: function (doc) {
+                            // Generate a filename for the invoice
+                            const fileName = `Invoice_${new Date().toISOString().slice(0, 10)}.pdf`;
+
+                            // Save the PDF
+                            doc.save(fileName); // Prompts the user to download
+                        },
+                        margin: [10, 10, 10, 10], // Adjust the margins
+                        x: 10,
+                        y: 10,
+                        width: 180 // Ensure the content fits the page width
+                    });
+                }
+            </script>
 
             <script>
                 // Initialize EmailJS
@@ -297,28 +397,54 @@
                 })();
 
                 function sendInvoice() {
-                    // Collect invoice data from the page
-                    const invoiceData = {
-                        client_email: prompt("Enter the client's email:"),
-                        client_name: document.getElementById("clientName").textContent.replace("client: ", ""),
-                        your_name: document.getElementById("designerName").textContent.replace("designer: ", ""),
-                        invoice_id: document.querySelector(".InvoiceIdNumber").textContent,
-                        subtotal: document.getElementById("subtotal").textContent,
-                        total: document.getElementById("total").textContent,
+                    const invoiceDiv = document.getElementById("invoice-div");
+
+                    // Generate PDF
+                    const options = {
+                        margin: 1,
+                        filename: 'invoice.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
                     };
 
-                    // Send the email using the email template
-                    emailjs.send("2Ip3jr8nRZeJ-wIAK", "template_410k4yj", invoiceData)
-                        .then((response) => {
-                            alert("Invoice sent successfully!");
-                        })
-                        .catch((error) => {
-                            alert("Failed to send the invoice. Please try again.");
-                            console.error("Error sending email:", error);
+                    document.fonts.ready.then(() => {
+                        html2canvas(invoiceDiv).then((canvas) => {
+                            const imgData = canvas.toDataURL("image/png");
+                            const pdf = new jsPDF();
+                            pdf.addImage(imgData, "PNG", 10, 10, 180, 240);
+                            pdf.save("invoice.pdf");
+                        }).catch((error) => {
+                            console.error("Error capturing the invoice div:", error);
                         });
-                }
+                    });
 
+                    html2pdf().set(options).from(invoiceDiv).toPdf().output('datauristring').then(function(pdfBase64) {
+                        // Remove the data URI prefix to get a pure base64 string
+                        const pdfData = pdfBase64.split(',')[1];
+
+                        // Collect data for EmailJS
+                        const invoiceData = {
+                            client_email: prompt("Enter the client's email:"),
+                            client_name: document.getElementById("clientName").textContent.replace("client: ", ""),
+                            your_name: document.getElementById("designerName").textContent.replace("designer: ", ""),
+                            invoice_id: document.querySelector(".InvoiceIdNumber").textContent,
+                            pdf_attachment: pdfData // Base64-encoded PDF
+                        };
+
+                        // Send email with PDF attachment
+                        emailjs.send("service_nayof0a", "template_410k4yj", invoiceData)
+                            .then((response) => {
+                                alert("Invoice sent successfully!");
+                            })
+                            .catch((error) => {
+                                alert("Failed to send the invoice. Please try again.");
+                                console.error("Error sending email:", error);
+                            });
+                    });
+                }
             </script>
+            
 
         </div>
     </body>
