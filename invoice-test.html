@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Quote Generator</title>
+        <link rel=stylesheet href="styles.css">
+
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    </head>
+    <body style="background-color: #0B0C11;">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="logo of slipstream">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="invoice.html">Invoice</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+
+        <div id="invoice-div" class="Invoice">
+            <h2>Graphic Design Invoice</h2>
+
+            <h3 onclick="changeName()" id="designerName">designer: name</h3>
+                <script>
+                    function changeName() {
+                        let name = prompt("What is your name?")
+                        document.getElementById("designerName").innerHTML = 'designer: ' + name;
+                    }
+                </script>
+
+            <h3 onclick="changeEmail()" id="email" >email@address.com</h3>
+            <script>
+                function changeEmail() {
+                let newEmail = prompt("What is your email?", "email@test.com")
+                document.getElementById("email").innerHTML = newEmail;
+                }
+            </script>
+
+            <h3 onclick="changeSocial()" id="social" >@social</h3>
+            <script>
+            function changeSocial() {
+            let newSocial = prompt("What is your @?")
+            document.getElementById("social").innerHTML = '@' + newSocial;
+            }
+            </script>
+
+
+            <h3 onclick="changeClientName()" id="clientName" class="newInvoiceGroup">client: name</h3>
+            <script>
+                function changeClientName() {
+                let newClient = prompt("What is your client's name?")
+                document.getElementById("clientName").innerHTML = 'client: ' + newClient;
+                }
+            </script>
+
+            <h3 onclick="changeDateTime()" id="dateTime" class="newInvoiceGroup">Tue 17/09/2024 - 01:43 PM</h3>
+            <script>
+                function changeDateTime() {
+                let Day = prompt("What day is it?");
+                let Month = prompt("What month is it?");
+                let Year = prompt("What year is it?");
+
+                    let newDate = Day + '/' + Month + '/' + Year;
+
+                document.getElementById("dateTime").innerHTML = newDate;
+                }
+            </script>
+
+            <h3 onclick="changePaymentDue()" id="dueDate">Payment Due: 12/10/2024</h3>
+            <script>
+                function changePaymentDue() {
+                let dDay = prompt("What day would you like payment by?");
+                let dMonth = prompt("What month would that be?");
+                let dYear = prompt("What year is it?");
+
+                    let newDueDate = dDay + '/' + dMonth + '/' + dYear;
+
+                document.getElementById("dueDate").innerHTML = "Payment Due: " + newDueDate;
+                }
+            </script>
+
+            <h3 class="newInvoiceGroup"> -- </h3>
+
+            <div id="leftRightGroup">
+                <h3 id="left">Invoice ID:</h3>
+                <h3 onClick="changeInvoiceID()" class="InvoiceIdNumber" id="right">#0053190</h3>
+                <script>
+                    function changeInvoiceID() {
+                        let invoiceID = prompt("Enter Invoice ID:");
+                        if (invoiceID) {
+                            document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
+                        }
+                    }
+                </script>
+            </div>
+            
+            <div id="leftRightGroup">
+                <h3 id="left">Account Name:</h3>
+                <h3 onClick="changeAccountName()" class="accName" id="right">Name Surname</h3>
+                <script>
+                    function changeAccountName() {
+                        let accountName = prompt("Enter Account Name:");
+                        if (accountName) {
+                            document.querySelector(".accName").innerHTML = accountName;
+                        }
+                    }
+                </script>
+            </div>
+            
+            <div id="leftRightGroup">
+                <h3 id="left">Sort Code:</h3>
+                <h3 onClick="changeSortCode()" class="sortCode" id="right">00-00-00</h3>
+                <script>
+                    function changeSortCode() {
+                        let sortCode = prompt("Enter Sort Code (6 digits):");
+                        if (sortCode && /^\d{6}$/.test(sortCode)) { // Validate input is 6 digits
+                            let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(2, 4)}-${sortCode.slice(4)}`;
+                            document.querySelector(".sortCode").innerHTML = formattedSortCode;
+                        } else {
+                            alert("Please enter a valid 6-digit sort code.");
+                        }
+                    }
+                </script>
+            </div>
+            
+            <div id="leftRightGroup">
+                <h3 id="left">Account No.:</h3>
+                <h3 onClick="changeAccountNumber()" class="accNo" id="right">12345678</h3>
+                <script>
+                    function changeAccountNumber() {
+                        let accountNumber = prompt("Enter Account Number:");
+                        if (accountNumber) {
+                            document.querySelector(".accNo").innerHTML = accountNumber;
+                        }
+                    }
+                </script>
+            </div>
+            
+
+            <h3 class="newInvoiceGroup"> -- </h3>
+
+            <div id="leftRightGroup">
+                <h3 onclick="changeName1()" class="item1Name" id="left">ITEM 1:</h3>
+                <h3 onclick="changeValue1()" class="item1Value" id="right">£150</h3>
+            </div>
+            <div id="leftRightGroup">
+                <h3 onclick="changeName2()" class="item2Name" id="left">ITEM 2:</h3>
+                <h3 onclick="changeValue2()" class="item2Value" id="right">£3750</h3>
+            </div>
+            <div id="leftRightGroup">
+                <h3 onclick="changeName3()" class="item3Name" id="left">ITEM 3:</h3>
+                <h3 onclick="changeValue3()" class="item3Value" id="right">£75</h3>
+            </div>
+            
+            <h3>-------------------------------------</h3>
+            
+            <div id="leftRightGroup">
+                <h3 id="left">Subtotal:</h3>
+                <h3 id="subtotal" class="right" style="margin-right: 30px;">£3,975</h3>
+            </div>
+            <div id="leftRightGroup">
+                <h3 id="left">Discount(0%):</h3>
+                <h3 onclick="changeDiscount()" id="discount" class="right" style="margin-right: 30px;">£0</h3>
+            </div>
+            <div id="leftRightGroup">
+                <h3 id="left">VAT(14%):</h3>
+                <h3 id="vat" class="right" style="margin-right: 30px;">£556.50</h3>
+            </div>
+            <div id="leftRightGroup">
+                <h3 id="left">TOTAL:</h3>
+                <h3 id="total" class="right" style="margin-right: 30px;">£4,531.50</h3>
+            </div>
+            
+            <script>
+                let itemValues = [150, 3750, 75]; // Default values
+                let discountRate = 0; // Default discount rate in %
+
+                // Functions to update item names
+                function changeName1() {
+                    let itemName = prompt("Enter ITEM 1 name:");
+                    if (itemName) {
+                        document.querySelector(".item1Name").innerHTML = itemName;
+                    }
+                }
+
+                function changeValue1() {
+                    let itemValue = parseFloat(prompt("Enter ITEM 1 value:", "150"));
+                    if (!isNaN(itemValue)) {
+                        itemValues[0] = itemValue;
+                        updateTotals();
+                    }
+                }
+
+                function changeName2() {
+                    let itemName = prompt("Enter ITEM 2 name:");
+                    if (itemName) {
+                        document.querySelector(".item2Name").innerHTML = itemName;
+                    }
+                }
+
+                function changeValue2() {
+                    let itemValue = parseFloat(prompt("Enter ITEM 2 value:", "3750"));
+                    if (!isNaN(itemValue)) {
+                        itemValues[1] = itemValue;
+                        updateTotals();
+                    }
+                }
+
+                function changeName3() {
+                    let itemName = prompt("Enter ITEM 3 name:");
+                    if (itemName) {
+                        document.querySelector(".item3Name").innerHTML = itemName;
+                    }
+                }
+
+                function changeValue3() {
+                    let itemValue = parseFloat(prompt("Enter ITEM 3 value:", "75"));
+                    if (!isNaN(itemValue)) {
+                        itemValues[2] = itemValue;
+                        updateTotals();
+                    }
+                }
+
+                function changeDiscount() {
+                    let discount = parseFloat(prompt("Enter discount rate in %:", "0"));
+                    if (!isNaN(discount) && discount >= 0 && discount <= 100) {
+                        discountRate = discount;
+                        updateTotals();
+                    }
+                }
+
+                function updateTotals() {
+                    let subtotal = itemValues.reduce((acc, curr) => acc + curr, 0);
+                    let discount = (subtotal * discountRate) / 100;
+                    let vat = (subtotal - discount) * 0.14;
+                    let total = subtotal - discount + vat;
+
+                    document.getElementById("subtotal").innerHTML = `£${subtotal.toFixed(2)}`;
+                    document.getElementById("discount").innerHTML = `£${discount.toFixed(2)}`;
+                    document.getElementById("vat").innerHTML = `£${vat.toFixed(2)}`;
+                    document.getElementById("total").innerHTML = `£${total.toFixed(2)}`;
+                }
+
+                // Initial calculation
+                updateTotals();
+
+            </script>
+
+            <button onclick="generatePDF()">Generate PDF</button>
+            <script>
+                function generatePDF() {
+                    const element = document.getElementById("invoice-div");
+                    html2canvas(element).then(canvas => {
+                        const imgData = canvas.toDataURL("image/png");
+                        const pdf = new jsPDF();
+                        pdf.addImage(imgData, "PNG", 0, 0, 210, 297); // A4 dimensions in mm
+                        pdf.save("invoice.pdf");
+                    });
+                }
+            </script>
+
+        </div>
+    </body>
+</html>
