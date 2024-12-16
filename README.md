@@ -673,6 +673,8 @@ unconventional way.
   </ul>
 </section>
 
+<h1>Goals I Aimed to achieve in development</h1>
+
 <h2>Project Goals</h2>
 <p>
   - To build a web-based invoice generator that allows users to easily create
@@ -770,7 +772,7 @@ unconventional way.
 
 <h3>Structure</h3>
 <p>
-  The website structure includes a homepage, invoicing page, and a contact page,
+  The website structure includes a homepage, an invoicing page, and a pricing page,
   all linked by a sticky navigation bar.
 </p>
 
@@ -799,38 +801,48 @@ unconventional way.
 <h2>Content Requirements</h2>
 <h3>Section: Navigation Bar</h3>
 <p>
-  A sticky navigation bar that links to the homepage, invoice page, and contact
+  A sticky navigation bar that links to the homepage, invoice page, and pricing
   page. Includes a logo and links to key sections.
+
+  <img width="1440" alt="Screenshot 2024-12-16 at 15 45 51" src="https://github.com/user-attachments/assets/64dfc6ef-4045-4179-baeb-bb8aa778584f" />
 </p>
 
 <h3>Section: Footer</h3>
-<p>Contains quick links, contact info, and a copyright statement.</p>
+<p>Contains quick links, contact info, and a copyright statement.
+<img width="1440" alt="Screenshot 2024-12-16 at 15 46 46" src="https://github.com/user-attachments/assets/87194524-1095-469f-9429-4318865c445d" />
+</p>
+
 
 <h3>Webpage: Homepage</h3>
 <p>
   Welcomes users with a brief description of the tool. Prominently displays a
   call-to-action button to start generating an invoice.
+<img width="1440" alt="Screenshot 2024-12-16 at 15 47 26" src="https://github.com/user-attachments/assets/e81968b4-2a17-448f-a014-e8136e84d7ad" />
+
 </p>
 
-<h3>Webpage: How to Play</h3>
+<h3>Popup: How to Use</h3>
 <p>
   Step-by-step instructions for using the invoice generator. Provides guidance
   on how to customize fields and download the invoice.
-</p>
 
-<h3>Webpage: Contact Me</h3>
-<p>Simple form for users to send inquiries to the site owner.</p>
+  <img width="1440" alt="Screenshot 2024-12-16 at 15 47 55" src="https://github.com/user-attachments/assets/4e11e732-e507-481d-ba9b-24042d395e06" />
+
+</p>
 
 <h3>Webpage: 404</h3>
 <p>
   Custom 404 page guiding users back to the homepage or offering links to key
   pages.
+
+  <img width="1440" alt="Screenshot 2024-12-16 at 15 28 41" src="https://github.com/user-attachments/assets/b6dc2972-ee21-42b9-9be7-8a72f7356a00" />
+
 </p>
 
 <h2>Structure</h2>
 <h3>Overall Structure</h3>
 <p>
-  The site is structured with a homepage, an invoice generator, a contact page,
+  The site is structured with a homepage, an invoice generator, a pricing page,
   and error pages like 404.
 </p>
 
@@ -842,31 +854,10 @@ unconventional way.
 
 <h3>Interactive Experience</h3>
 <p>
-  Users interact with dynamic fields (editable text, date pickers, dropdowns) to
-  customize their invoice. Features like background texture change, modal
+  Users interact with dynamic fields (editable text, date pickers) to
+  customize their invoices. Features like background texture change, modal
   dialogs, and a reset button enhance the user experience.
 </p>
-
-<h2>Skeleton</h2>
-<h3>Wireframes</h3>
-<ul>
-  <li>
-    <strong>Home Page</strong>: A large hero section with a call-to-action (CTA)
-    button. Links to important pages: How to Play, and Contact.
-  </li>
-  <li>
-    <strong>How to Play</strong>: A simple, instructional page with bullet
-    points and an intuitive layout.
-  </li>
-  <li>
-    <strong>Contact Me</strong>: A form with fields for name, email, and
-    message.
-  </li>
-  <li>
-    <strong>404</strong>: A message informing users that the page does not
-    exist, with links to navigate back.
-  </li>
-</ul>
 
 <h2>Changes During Development</h2>
 <p>
@@ -875,82 +866,15 @@ unconventional way.
   smaller screens.
 </p>
 
-<h2>Surface</h2>
-<h3>Colour Scheme</h3>
-<p>
-  Uses a dark theme with bright accents for buttons and highlights, providing a
-  professional and modern feel.
-</p>
-
-<h3>Typography</h3>
-<p>
-  The project uses the "DM Sans" font for all text, ensuring readability and a
-  modern look.
-</p>
-
-<h3>Images</h3>
-<p>
-  Background textures for the invoice generator. Logos for branding and
-  testimonials.
-</p>
-
-<h2>Features</h2>
-<h3>The Game Area</h3>
-<p>
-  A dynamic area where users input data for their invoice, including client
-  details, items, and payment information.
-</p>
-
-<h3>Browser Tab</h3>
-<p>
-  The tab displays "Design Quote Generator" when the site is loaded, and
-  "Invoice Generated" when the user completes the invoice.
-</p>
-
-<h3>Website Header</h3>
-<p>Includes the logo and navigation links.</p>
-
-<h3>How to Play</h3>
-<p>A page detailing how users can interact with the tool.</p>
-
-<h3>Contact Me</h3>
-<p>A simple contact form for user inquiries.</p>
-
-<h3>Sequence Select</h3>
-<p>
-  Allows users to select the sequence or type of invoice they wish to create.
-</p>
 
 <h3>Results Modal</h3>
 <p>Displays a success message after generating an invoice.</p>
 
-<h3>Reset Button</h3>
-<p>Resets all input fields to their default values.</p>
-
 <h3>404 Page Message</h3>
 <p>A custom error message that guides users back to the homepage.</p>
 
-<h2>Future Development</h2>
-<ul>
-  <li>Add a feature to save invoices and re-use them later.</li>
-  <li>Integrate payment tracking for invoices.</li>
-  <li>Improve mobile UI for better small-screen experiences.</li>
-</ul>
 
-<h2>Technologies Used</h2>
-<h3>Languages</h3>
-<p>HTML, CSS, JavaScript</p>
-
-<h3>Frameworks</h3>
-<p>None (custom solution using pure HTML, CSS, and JavaScript)</p>
-
-<h3>Tools</h3>
-<p>
-  jsPDF for generating PDFs from the invoice. html2canvas for capturing the
-  invoice as an image.
-</p>
-
-<h2>Testing</h2>
+<h1>Testing</h1>
 <p>
   Extensive testing was conducted for all interactive elements, including forms,
   modals, and responsive design.
