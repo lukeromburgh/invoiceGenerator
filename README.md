@@ -899,8 +899,17 @@ unconventional way.
   <ol>
     <li>
       Home page
-      ![Uploading Screenshot 2024-12-16 at 16.03.36.png…]()
-    </li>     
+      <img width="1440" alt="Screenshot 2024-12-16 at 16 03 36" src="https://github.com/user-attachments/assets/b8fbd906-c3d4-4bbf-9763-31558955b848" />
+  </li>     
+    <li>Invoice Page
+   <img width="1440" alt="Screenshot 2024-12-16 at 16 03 54" src="https://github.com/user-attachments/assets/88c10c78-0b96-4a9b-bd5e-23393ee67ed1" />
+ 
+  </li>
+  <li>
+    Pricing Page
+    <img width="1440" alt="Screenshot 2024-12-16 at 16 04 55" src="https://github.com/user-attachments/assets/b95cfa1d-4135-4b73-ba3f-2b1bdeeba4e7" />
+
+  </li>
   </ol>  
   </li>
 </ul>
