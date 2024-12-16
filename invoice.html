@@ -15,6 +15,9 @@
        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     </head>
     <body style="background-color: #0B0C11;">
@@ -329,69 +332,47 @@
 
             <button onclick="sendInvoice()" class="btn btn-primary btn-invoice">Send Invoice</button>
 
-            <button onclick="saveInvoice()" id="saveInvoiceButton" class="btn btn-primary btn-invoice">Save Invoice</button>
+            <button onclick="saveInvoiceAsImage()" id="saveInvoiceButton" class="btn btn-primary btn-invoice">Save Invoice</button>
 
+
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+            <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
             <script>
-                async function saveInvoice() {
-                    // Import jsPDF library
-                    const { jsPDF } = window.jspdf;
-            
-                    // Initialize jsPDF instance
-                    const pdf = new jsPDF('p', 'mm', [320, 860]);  // Use A4 size paper (210mm x 297mm)
-            
-                    // Select the invoice div
-                    const invoiceDiv = document.getElementById("invoice-div");
-            
-                    // Capture the content and add it to the PDF
-                    await pdf.html(invoiceDiv, {
-                        callback: function (doc) {
-                            // Generate a filename for the invoice
-                            const fileName = `Invoice_${new Date().toISOString().slice(0, 10)}.pdf`;
-            
-                            // Save the PDF
-                            doc.save(fileName); // Prompts the user to download
-                        },
-                        x: 10,
-                        y: 10,
-                        width: 190,  // Width of the content in mm (adjust if necessary)
-                        scale: 1.0  // Adjust scale if necessary to fit the content (e.g., 0.8 for smaller content)
-                    });
-                }
-            </script>
+            //Create PDf from HTML...
+            function saveInvoiceAsImage() {
+            const invoiceDiv = document.getElementById("invoice-div");
+
+            // Use html2canvas to capture the div
+            html2canvas(invoiceDiv).then((canvas) => {
+                // Convert canvas to an image
+                const imgData = canvas.toDataURL("image/png");
+
+                // Create a link element
+                const link = document.createElement("a");
+                link.href = imgData;
+
+                // Specify download filename
+                link.download = `Invoice_${new Date().toISOString().slice(0, 10)}.png`;
+
+                // Programmatically trigger click
+                document.body.appendChild(link);
+                link.click();
+
+                // Remove the link after download
+                document.body.removeChild(link);
+            }).catch((error) => {
+                console.error("Error saving invoice as image:", error);
+            });
+        }
+
+
+</script>
 
 
 
             <!---------------------------    EmailJS Scripts    ---------------------------------->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-            <script>
-                async function saveInvoice() {
-                    // Import jsPDF library
-                    const { jsPDF } = window.jspdf;
-
-                    // Initialize jsPDF instance
-                    const pdf = new jsPDF();
-
-                    // Select the invoice div
-                    const invoiceDiv = document.getElementById("invoice-div");
-
-                    // Add the invoice div content to the PDF
-                    await pdf.html(invoiceDiv, {
-                        callback: function (doc) {
-                            // Generate a filename for the invoice
-                            const fileName = `Invoice_${new Date().toISOString().slice(0, 10)}.pdf`;
-
-                            // Save the PDF
-                            doc.save(fileName); // Prompts the user to download
-                        },
-                        margin: [10, 10, 10, 10], // Adjust the margins
-                        x: 10,
-                        y: 10,
-                        width: 180 // Ensure the content fits the page width
-                    });
-                }
-            </script>
 
             <script>
                 // Initialize EmailJS
