@@ -522,7 +522,6 @@ nav ul li a:hover {
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  z-index: 1;
 }
 
 .profile {
@@ -574,6 +573,51 @@ nav ul li a:hover {
   font-size: 17px;
   color: #000000;
 }
+
+
+
+@media (max-width: 1300px) {
+  .review-card {
+    height: 50vh;
+    width: 76%;
+  }
+
+  .social-proof {
+    height: 110vh;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-image {
+    height: 50px;
+  }
+
+  .review-name {
+    font-size: 16px;
+    margin-top: 35px;
+  }
+
+  .stars {
+    height: 60px;
+  }
+
+  .review-paragraph {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 404px) {
+  .review-card {
+    height: 68vh;
+  }
+
+  .social-proof {
+    height: 125vh;
+    margin-bottom: 80px;
+  }
+}
+
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -1154,4 +1198,16 @@ nav ul li a:hover {
 
 #popup button:hover {
   background-color: #444;
+}
+
+@media (max-width:768px) {
+
+  #popup {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+    #popup-overlay {
+      min-width:200%;
+    }
 }
