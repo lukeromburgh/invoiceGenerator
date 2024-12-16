@@ -522,7 +522,7 @@ nav ul li a:hover {
 }
 
 .profile {
-  position: flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
