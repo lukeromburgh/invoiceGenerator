@@ -792,7 +792,7 @@ nav ul li a:hover {
 
 @media (max-width: 600px) {
   .hero {
-    position: flex;
+    display: flex;
     flex-direction: column;
     align-content: center;
     text-align: left;
