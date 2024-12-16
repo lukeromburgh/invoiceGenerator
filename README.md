@@ -1,4 +1,8 @@
-<h1>Design Quote Generator / Invoice Generator</h1>
+<h1>Slipstream: A Nostalgic Take on a Modern Invoice Generator</h1>
+
+<p>Slipstream is a sleek and modern invoice generator designed to help users create and share visually appealing invoices. Styled as nostalgic physical receipts, the design follows current trends in SaaS (Software as a Service) web design, making it intuitive, professional, and fun to use.</p>
+
+Inspired by popular services like Receiptify, Slipstream’s distinctive receipt-style invoices add a touch of personality, offering a unique alternative to traditional invoice formats. This makes Slipstream perfect for freelancers, small business owners, or casual users looking to elevate how they request payments.
 
 <h2>Project Goals</h2>
     <p>- To build a web-based invoice generator that allows users to easily create and personalize receipt-style invoices.</p>
