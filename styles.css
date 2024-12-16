@@ -21,7 +21,6 @@
 
 .dm-sans {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
@@ -113,7 +112,6 @@ nav ul li a:hover {
 
 .hero h1 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-size: 52px;
@@ -129,7 +127,6 @@ nav ul li a:hover {
 
 .hero p {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
@@ -277,7 +274,6 @@ nav ul li a:hover {
 
 .features-content h2 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   line-height: 125%;
   font-style: normal;
@@ -308,7 +304,6 @@ nav ul li a:hover {
 
 .banner h2 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   line-height: 125%;
   font-style: normal;
@@ -318,7 +313,6 @@ nav ul li a:hover {
 
 .banner h2 span {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   line-height: 125%;
   font-style: normal;
@@ -335,7 +329,6 @@ nav ul li a:hover {
 .feature-header {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   line-height: 125%;
   font-style: normal;
@@ -347,7 +340,6 @@ nav ul li a:hover {
 .feature-text {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   line-height: 125%;
   font-style: normal;
@@ -445,7 +437,6 @@ nav ul li a:hover {
   text-align: center;
   justify-self: center;
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
@@ -508,7 +499,6 @@ nav ul li a:hover {
     text-align: center;
     justify-self: center;
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
@@ -556,7 +546,6 @@ nav ul li a:hover {
     margin-top: 50px;
     float: left;
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
@@ -576,7 +565,6 @@ nav ul li a:hover {
     margin-top: 0;
     float: left;
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 17px;
@@ -684,7 +672,6 @@ nav ul li a:hover {
 
   .banner h2 {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     line-height: 125%;
     font-style: normal;
@@ -694,7 +681,6 @@ nav ul li a:hover {
   
   .banner h2 span {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     line-height: 125%;
     font-style: normal;
@@ -766,7 +752,6 @@ nav ul li a:hover {
 
   .hero h1 {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 1.75rem;
@@ -782,7 +767,6 @@ nav ul li a:hover {
   
   .hero p {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 1rem;
@@ -824,7 +808,6 @@ nav ul li a:hover {
 
   .hero h1 {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 2.5rem;
@@ -841,7 +824,6 @@ nav ul li a:hover {
 
   .hero p {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 1rem;
