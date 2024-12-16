@@ -9,6 +9,7 @@ Inspired by popular services like Receiptify, Slipstream’s distinctive receipt
 
 <h3>1. Freelancers and Small Business Owners</h3>
 For freelancers and small businesses, Slipstream offers an escape from the dull, rigid templates of traditional invoice tools. These users often seek tools that not only help them create invoices but also reinforce their branding and creativity. Slipstream delivers this by providing a sleek, SaaS-inspired interface and eye-catching, receipt-style invoices.
+<br>
 <ol>
 <li>Time-Saving Design: The app minimizes time spent on designing invoices by streamlining essential elements into a visually appealing, nostalgic format.</li>
 <li>Creative Professionalism: Clients of freelancers, especially in creative fields like graphic design, art, or social media management, often appreciate thoughtful touches. Slipstream enables users to stand out by presenting bills as an artful extension of their work, not just transactional paperwork.</li>
@@ -18,7 +19,7 @@ By bringing style and ease to invoicing, Slipstream helps these users maintain a
 
 <h3>2. Casual Users for Personal Use</h3>
 During the development phase, it became clear that Slipstream resonated with a more playful audience as well. For casual users, generating invoices isn’t about formal billing—it’s about humor, personalization, and sharing moments in an unconventional way.
-
+<br>
 <ol>
 <li>The "Cheeky Bill" Scenario: Imagine a friend who habitually forgets to pay their share after a night out. Slipstream allows users to craft a detailed "receipt" to lightly nudge that friend in a fun and humorous way. Instead of awkward reminders or text messages, a quirky invoice breaks the ice and gets the point across.</li>
 <li>Broader Personal Applications: Whether it’s itemizing contributions for a group event, tabulating shared groceries, or simply poking fun at a buddy's consistent borrowing, Slipstream makes a traditionally serious task lighthearted and engaging.
