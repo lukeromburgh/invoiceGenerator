@@ -832,7 +832,7 @@ unconventional way.
 
 <h3>Webpage: 404</h3>
 <p>
-  Custom 404 page guiding users back to the homepage or offering links to key
+  Custom 404-page guiding users back to the homepage or offering links to key
   pages.
 
   <img width="1440" alt="Screenshot 2024-12-16 at 15 28 41" src="https://github.com/user-attachments/assets/b6dc2972-ee21-42b9-9be7-8a72f7356a00" />
@@ -879,6 +879,31 @@ unconventional way.
   Extensive testing was conducted for all interactive elements, including forms,
   modals, and responsive design.
 </p>
+
+<h3>Responsivness</h3>
+<p>Utilized Chrome dev tools as well as https://responsivedesignchecker.com/ to check responsiveness of all my web pages and to ensure that the website was functional across all screen sizes. 
+
+<img width="1440" alt="Screenshot 2024-12-16 at 15 55 27" src="https://github.com/user-attachments/assets/79105195-84bc-4905-acbd-d600468cf053" />
+<img width="1440" alt="Screenshot 2024-12-16 at 15 55 48" src="https://github.com/user-attachments/assets/8ae006f7-c6ed-4656-9527-305b4be896ca" />
+<img width="1440" alt="Screenshot 2024-12-16 at 15 55 53" src="https://github.com/user-attachments/assets/8ed356cb-ef27-43f3-94c6-0111bb885b17" />
+<img width="1440" alt="Screenshot 2024-12-16 at 15 59 26" src="https://github.com/user-attachments/assets/74a0f739-76db-4644-bdd0-8c2201ce3e1e" />
+
+</p>
+
+<h3>Lighthouse Testing</h3>
+<p>I tested all pages with Chrome's Lighthouse performance tester. </p>
+
+<ul>
+  <li>
+    <h4>Desktop Testing</h4>
+  <ol>
+    <li>
+      Home page
+      ![Uploading Screenshot 2024-12-16 at 16.03.36.png…]()
+    </li>     
+  </ol>  
+  </li>
+</ul>
 
 <h3>Bugs</h3>
 <p>
