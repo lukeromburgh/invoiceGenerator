@@ -912,6 +912,26 @@ unconventional way.
   </li>
   </ol>  
   </li>
+
+  <li>
+    <h4>Mobile Testing</h4>
+    <ol>
+   <li>Home Page
+   <img width="1440" alt="Screenshot 2024-12-16 at 16 01 40" src="https://github.com/user-attachments/assets/d1499a31-22bf-455a-83c3-07a2e1ca5859" />
+   </li>
+     <li>
+    Invoice Page
+       <img width="1440" alt="Screenshot 2024-12-16 at 16 03 14" src="https://github.com/user-attachments/assets/9c921889-ff92-437d-b1a8-6fa0264593f7" />
+
+
+  </li>
+  <li>
+    Pricing page
+    <img width="1440" alt="Screenshot 2024-12-16 at 16 02 46" src="https://github.com/user-attachments/assets/2cc269de-be2a-457c-ab1f-a5c75a62e10c" />
+
+  </li>
+  </ol>
+  </li>
 </ul>
 
 <h3>Bugs</h3>
