@@ -646,7 +646,7 @@ unconventional way.
   />
 
   <h3>Favicon</h3>
-  ![ICO to PNG Favicon](https://github.com/user-attachments/assets/6270af1c-bd06-44b7-8d0d-df00a40314fa)
+  <p>The favicon was custom-made in favicon.cc, a website I discovered a few months ago. I liked the idea of a retro favicon reminiscent of those you'd see in the early 2000s and late 1990s. The low-resolution style that favicon.cc offers is perfect for this project.</p>
   <img width="1440" alt="Screenshot 2024-12-16 at 15 20 20" src="https://github.com/user-attachments/assets/886b8cea-63d5-4e84-8263-37b592ba384d" />
 
 
