@@ -537,7 +537,7 @@ nav ul li a:hover {
 }
 
 .review-image img {
-  size: 150%;
+  resize: 150%;
   object-fit: cover;
 }
 
@@ -871,14 +871,10 @@ nav ul li a:hover {
 
   .features-content h2 {
     font-size: 18px;
-    align-items: left;
-    align-content: left;
     text-align: left;
   }
 
   .features-content button {
-    align-items: left;
-    align-content: left;
     text-align: left;
     max-width: 100%;
   }
