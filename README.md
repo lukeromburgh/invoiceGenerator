@@ -16,13 +16,15 @@ For freelancers and small businesses, Slipstream offers an escape from the dull,
 By bringing style and ease to invoicing, Slipstream helps these users maintain a professional edge while introducing a layer of creativity into their client communications.</li>
 </ol>
 
-2. Casual Users for Personal Use
+<h3>2. Casual Users for Personal Use</h3>
 During the development phase, it became clear that Slipstream resonated with a more playful audience as well. For casual users, generating invoices isn’t about formal billing—it’s about humor, personalization, and sharing moments in an unconventional way.
 
-The "Cheeky Bill" Scenario: Imagine a friend who habitually forgets to pay their share after a night out. Slipstream allows users to craft a detailed "receipt" to lightly nudge that friend in a fun and humorous way. Instead of awkward reminders or text messages, a quirky invoice breaks the ice and gets the point across.
-Broader Personal Applications: Whether it’s itemizing contributions for a group event, tabulating shared groceries, or simply poking fun at a buddy's consistent borrowing, Slipstream makes a traditionally serious task lighthearted and engaging.
-Social Media Appeal: Its stylish, modern look makes these "invoices" highly shareable, adding an extra dimension of fun when users post them to group chats or social platforms.
+<ol>
+<li>The "Cheeky Bill" Scenario: Imagine a friend who habitually forgets to pay their share after a night out. Slipstream allows users to craft a detailed "receipt" to lightly nudge that friend in a fun and humorous way. Instead of awkward reminders or text messages, a quirky invoice breaks the ice and gets the point across.</li>
+<li>Broader Personal Applications: Whether it’s itemizing contributions for a group event, tabulating shared groceries, or simply poking fun at a buddy's consistent borrowing, Slipstream makes a traditionally serious task lighthearted and engaging.
+Social Media Appeal: Its stylish, modern look makes these "invoices" highly shareable, adding an extra dimension of fun when users post them to group chats or social platforms.</li>
 This dual-purpose appeal has made Slipstream more versatile than initially planned, allowing it to support both serious workflows and playful interactions effortlessly.
+</ol>
 
 
 <h2>Project Goals</h2>
