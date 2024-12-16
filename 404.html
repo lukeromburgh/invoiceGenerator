@@ -1,109 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Page Not Found</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/cardboard.webp');
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("images/cardboard.webp");
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
 
-        .error-container {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+      .error-container {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
 
-        h1 {
-            font-family: "DM Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 480px;
-            margin: 0;
-            padding: 0;
-            color: #000000ba;
-        }
+      h1 {
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 480px;
+        margin: 0;
+        padding: 0;
+        color: #000000ba;
+      }
 
-        h2 {
-            font-family: "DM Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 30px;
-            color: #ffffff;
-        }
+      h2 {
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 30px;
+        color: #ffffff;
+      }
 
-        p {
-            font-family: "DM Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 18px;
-            color: #f1f1f1;
-        }
+      p {
+        font-family: "DM Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 18px;
+        color: #f1f1f1;
+      }
 
-        .btn-primary {
-            appearance: button;
-            background-color: #000000;
-            border-radius: 6px;
-            border-width: 0;
-            box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-            box-sizing: border-box;
-            color: #fff;
-            cursor: pointer;
-            font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
-            font-size: 14px;
-            height: 44px;
-            line-height: 1.15;
-            outline: none;
-            overflow: hidden;
-            padding: 0 25px;
-            position: relative;
-            text-align: center;
-            text-transform: none;
-            transition: all .3s,box-shadow .08s ease-in;
-            width: 200px;
-            }
+      .btn-primary {
+        appearance: button;
+        background-color: #000000;
+        border-radius: 6px;
+        border-width: 0;
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto,
+          "Helvetica Neue", Ubuntu, sans-serif;
+        font-size: 14px;
+        height: 44px;
+        line-height: 1.15;
+        outline: none;
+        overflow: hidden;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transition: all 0.3s, box-shadow 0.08s ease-in;
+        width: 200px;
+      }
 
-            .btn-primary:hover {
-                background-color: #5d75ff;
-                scale: 102%;
-                }
+      .btn-primary:hover {
+        background-color: #5d75ff;
+        scale: 102%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="logo of slipstream">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="invoice.html">Invoice</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-        </ul>
+      <div class="logo">
+        <img src="images/logo.jpg" alt="logo of slipstream" />
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
     </nav>
 
     <div class="error-container">
-        <h1>404</h1>
-        <h2>Oops! Page Not Found</h2>
-        <p>You've ventured too far.</p>
+      <h1>404</h1>
+      <h2>Oops! Page Not Found</h2>
+      <p>You've ventured too far.</p>
 
-        <a href="index.html"><button type="button" class="btn btn-primary btn-invoice">Go Back Home</button></a>
+      <a href="index.html"
+        ><button type="button" class="btn btn-primary btn-invoice">
+          Go Back Home
+        </button></a
+      >
     </div>
-</body>
+  </body>
 </html>
