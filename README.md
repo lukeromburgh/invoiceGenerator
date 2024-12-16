@@ -88,6 +88,11 @@ This dual-purpose appeal has made Slipstream more versatile than initially plann
 <section id="design-decisions">
   <h2>Design Decisions</h2>
 
+  <h3>Sitemap and Wireframes</h3>
+  <img width="684" alt="Screenshot 2024-12-16 at 13 14 51" src="https://github.com/user-attachments/assets/cc744af1-45ef-40bc-b4e8-8fe471c25eca" />
+
+  <img width="250" alt="Screenshot 2024-12-16 at 13 15 48" src="https://github.com/user-attachments/assets/00137116-cb1c-40b1-a3ba-6b474721a337" />
+  
   <h3>Color Scheme</h3>
   <p>
     Slipstream features a sleek and modern color palette that sets the tone for its professional and stylish aesthetic:
