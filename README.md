@@ -56,6 +56,20 @@ Social Media Appeal: Its stylish, modern look makes these "invoices" highly shar
 This dual-purpose appeal has made Slipstream more versatile than initially planned, allowing it to support both serious workflows and playful interactions effortlessly.
 </ol>
 
+<h2>Goals and Features</h2> 
+
+<p>Slipstream is a versatile tool designed to make invoicing simpler, more engaging, and tailored to both professional and casual needs. The core functionality focuses on invoice creation with a fun, unique twist while providing some features with a clear path toward future expansions. Below is a summary of the features in the current version of the app, as well as some goals for future enhancements:</p> <h3>1. Invoice and Receipt Creation</h3> <p>The primary feature of Slipstream is the ability to create personalized, receipt-style invoices. This enables users to generate invoices that align with their creativity and branding while staying functional and professional.</p> 
+<ol> 
+    <li>Customization: Users can input their items, pricing, and optional details like discounts or taxes. Further design customization allows for adding logos, social media handles, and custom colors.</li> 
+    <li>Unique Design: By offering nostalgic receipt-style invoices, users can elevate the experience beyond typical invoice software and inject their personality into every billing interaction.</li> 
+</ol> 
+<h3>2. Invoice Viewing and Exporting</h3> 
+<p>Once an invoice is created, users have the option to view it as a PDF, which can then be manually shared with clients, friends, or coworkers. While there’s no direct sharing capability at the moment, the exported PDF offers flexibility for various uses.</p> 
+<ol> 
+    <li>PDF Generation: Users can download invoices in a PDF format for easy viewing, printing, or emailing separately.</li> 
+    <li>Design Flexibility: After generating the invoice, users can tweak the design and export the latest version to ensure that it matches their current needs before sharing it externally.</li> 
+</ol> <h3>3. Future Goals: User Dashboard & Client Management
+</h3> <p>Looking forward, Slipstream aims to expand into a more full-featured tool for managing invoices, clients, and payment details. This would provide a more streamlined experience for freelancers, small business owners, and even larger teams.</p> <ul> <li>Dashboard: Users will be able to manage their invoices more effectively with a centralized dashboard for tracking past invoices, client information, and payment statuses. Think of it as a simplified version of CRM platforms like Salesforce, tailored to invoicing.</li> <li>Client Profiles: Users will be able to store and access detailed client profiles, including contact information, previous invoice history, and payment preferences, helping them maintain professional relationships over time.</li> <li>Payment Information Integration: One of the major goals for future development is the integration of payment solutions such as PayPal, Stripe, or direct bank transfers. This would allow users to send an invoice and accept payment in one seamless experience.</li> </ul> <h3>4. Recurring Invoicing</h3> <p>Another key feature under development is recurring invoicing. This feature would be particularly useful for freelancers and small business owners who provide ongoing services, such as monthly web development, design services, or subscription-based products.</p> <ul> <li>Automation: Users will be able to set up automated recurring invoices, meaning the app will generate and send them at regular intervals—monthly, weekly, etc.—without manual input.</li> </ul> <p>These features will greatly enhance the usability and profitability of Slipstream, transforming it from a fun, niche app to a valuable, professional invoicing tool for a wider audience.</p>
 
 
 <h2>Project Goals</h2>
