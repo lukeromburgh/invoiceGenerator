@@ -645,6 +645,12 @@ unconventional way.
     src="https://github.com/user-attachments/assets/650f5a92-8948-4db6-b64d-6093d41d58c6"
   />
 
+  <h3>Favicon</h3>
+  ![ICO to PNG Favicon](https://github.com/user-attachments/assets/6270af1c-bd06-44b7-8d0d-df00a40314fa)
+  <img width="1440" alt="Screenshot 2024-12-16 at 15 20 20" src="https://github.com/user-attachments/assets/886b8cea-63d5-4e84-8263-37b592ba384d" />
+
+
+
   <h3>Accessibility Features</h3>
   <ul>
     <li>
