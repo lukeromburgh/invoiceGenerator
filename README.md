@@ -4,6 +4,9 @@
 
 Inspired by popular services like Receiptify, Slipstream’s distinctive receipt-style invoices add a touch of personality, offering a unique alternative to traditional invoice formats. This makes Slipstream perfect for freelancers, small business owners, or casual users looking to elevate how they request payments.
 
+<img width="1440" alt="Screenshot 2024-12-16 at 10 04 12" src="https://github.com/user-attachments/assets/922ee42b-87d1-4a81-8481-4061c475070a" />
+
+
 <h2>Target User</h2>
 <p>Slipstream serves a diverse range of users with distinct needs and challenges, effectively bridging professional and casual invoicing.</p>
 
