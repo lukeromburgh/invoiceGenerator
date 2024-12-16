@@ -96,7 +96,8 @@ This dual-purpose appeal has made Slipstream more versatile than initially plann
   <h3>Color Scheme</h3>
   <p>
     Slipstream features a sleek and modern color palette that sets the tone for its professional and stylish aesthetic:
-     <div style="background-color: #000000; height: 60px; width:60px"></div> 
+<img width="783" alt="Screenshot 2024-12-16 at 13 29 06" src="https://github.com/user-attachments/assets/eb67efa8-b95b-4891-83af-7c1545bf7600" />
+
   </p>
   <ul>
     <li><strong>Primary Colors:</strong> Black and white form a minimalistic base, creating a polished UI that aligns with modern web design trends.</li>
