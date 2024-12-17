@@ -34,3 +34,42 @@
     let newEmail = prompt("What is your email?", "email@test.com");
     document.getElementById("email").innerHTML = newEmail;
   }
+
+  function changeSocial() {
+    let newSocial = prompt("What is your @?");
+    document.getElementById("social").innerHTML = "@" + newSocial;
+  }
+
+  function changeClientName() {
+    let newClient = prompt("What is your client's name?");
+    document.getElementById("clientName").innerHTML =
+      "client: " + newClient;
+  }
+
+  function changeDateTime() {
+    let Day = prompt("What day is it?");
+    let Month = prompt("What month is it?");
+    let Year = prompt("What year is it?");
+
+    let newDate = Day + "/" + Month + "/" + Year;
+
+    document.getElementById("dateTime").innerHTML = newDate;
+  }
+
+  function changePaymentDue() {
+    let dDay = prompt("What day would you like payment by?");
+    let dMonth = prompt("What month would that be?");
+    let dYear = prompt("What year is it?");
+
+    let newDueDate = dDay + "/" + dMonth + "/" + dYear;
+
+    document.getElementById("dueDate").innerHTML =
+      "Payment Due: " + newDueDate;
+  }
+
+  function changeInvoiceID() {
+    let invoiceID = prompt("Enter Invoice ID:");
+    if (invoiceID) {
+      document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
+    }
+  }

@@ -49,52 +49,16 @@
       <h3 onclick="changeEmail()" id="email">email@address.com</h3>
 
       <h3 onclick="changeSocial()" id="social">@social</h3>
-      <script>
-        function changeSocial() {
-          let newSocial = prompt("What is your @?");
-          document.getElementById("social").innerHTML = "@" + newSocial;
-        }
-      </script>
 
       <h3 onclick="changeClientName()" id="clientName" class="newInvoiceGroup">
         client: name
       </h3>
-      <script>
-        function changeClientName() {
-          let newClient = prompt("What is your client's name?");
-          document.getElementById("clientName").innerHTML =
-            "client: " + newClient;
-        }
-      </script>
 
       <h3 onclick="changeDateTime()" id="dateTime" class="newInvoiceGroup">
         Tue 17/09/2024 - 01:43 PM
       </h3>
-      <script>
-        function changeDateTime() {
-          let Day = prompt("What day is it?");
-          let Month = prompt("What month is it?");
-          let Year = prompt("What year is it?");
-
-          let newDate = Day + "/" + Month + "/" + Year;
-
-          document.getElementById("dateTime").innerHTML = newDate;
-        }
-      </script>
 
       <h3 onclick="changePaymentDue()" id="dueDate">Payment Due: 12/10/2024</h3>
-      <script>
-        function changePaymentDue() {
-          let dDay = prompt("What day would you like payment by?");
-          let dMonth = prompt("What month would that be?");
-          let dYear = prompt("What year is it?");
-
-          let newDueDate = dDay + "/" + dMonth + "/" + dYear;
-
-          document.getElementById("dueDate").innerHTML =
-            "Payment Due: " + newDueDate;
-        }
-      </script>
 
       <h3 class="newInvoiceGroup">--</h3>
 
@@ -103,14 +67,6 @@
         <h3 onClick="changeInvoiceID()" class="InvoiceIdNumber" id="right">
           #0053190
         </h3>
-        <script>
-          function changeInvoiceID() {
-            let invoiceID = prompt("Enter Invoice ID:");
-            if (invoiceID) {
-              document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
-            }
-          }
-        </script>
       </div>
 
       <div id="leftRightGroup">
