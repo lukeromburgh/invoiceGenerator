@@ -1004,6 +1004,16 @@ unconventional way.
   </li>
 </ul>
 
+<h3>Errors found when testing</h3>
+<img width="1437" alt="Screenshot 2024-12-17 at 20 01 37" src="https://github.com/user-attachments/assets/b8ecb694-1be1-43a0-bebe-7757f1bcbfed" />
+<p>The scale errors are void as the scale property was added to CSS. 
+  Proof: https://www.w3schools.com/cssref/css_pr_scale.php
+  Proof: https://css-tricks.com/almanac/properties/s/scale/
+</p>
+<img width="1440" alt="Screenshot 2024-12-17 at 20 05 41" src="https://github.com/user-attachments/assets/fb51b501-d4cf-4c46-aa1d-38df246b8430" />
+<p>No HTML errors were found when testing.</p>
+
+
 <h3>Bugs</h3>
 <p>
   <strong>Known Bugs</strong>: Minor display issues in Internet Explorer; some
