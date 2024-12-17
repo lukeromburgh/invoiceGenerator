@@ -45,21 +45,8 @@
       <h2>Graphic Design Invoice</h2>
 
       <h3 onclick="changeName()" id="designerName">designer: name</h3>
-      <script>
-        function changeName() {
-          let name = prompt("What is your name?");
-          document.getElementById("designerName").innerHTML =
-            "designer: " + name;
-        }
-      </script>
 
       <h3 onclick="changeEmail()" id="email">email@address.com</h3>
-      <script>
-        function changeEmail() {
-          let newEmail = prompt("What is your email?", "email@test.com");
-          document.getElementById("email").innerHTML = newEmail;
-        }
-      </script>
 
       <h3 onclick="changeSocial()" id="social">@social</h3>
       <script>
@@ -566,5 +553,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
