@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design Quote Generator</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,20 +45,69 @@
       <h2>Graphic Design Invoice</h2>
 
       <h3 onclick="changeName()" id="designerName">designer: name</h3>
+      <script>
+        function changeName() {
+          let name = prompt("What is your name?");
+          document.getElementById("designerName").innerHTML =
+            "designer: " + name;
+        }
+      </script>
 
       <h3 onclick="changeEmail()" id="email">email@address.com</h3>
+      <script>
+        function changeEmail() {
+          let newEmail = prompt("What is your email?", "email@test.com");
+          document.getElementById("email").innerHTML = newEmail;
+        }
+      </script>
 
       <h3 onclick="changeSocial()" id="social">@social</h3>
+      <script>
+        function changeSocial() {
+          let newSocial = prompt("What is your @?");
+          document.getElementById("social").innerHTML = "@" + newSocial;
+        }
+      </script>
 
       <h3 onclick="changeClientName()" id="clientName" class="newInvoiceGroup">
         client: name
       </h3>
+      <script>
+        function changeClientName() {
+          let newClient = prompt("What is your client's name?");
+          document.getElementById("clientName").innerHTML =
+            "client: " + newClient;
+        }
+      </script>
 
       <h3 onclick="changeDateTime()" id="dateTime" class="newInvoiceGroup">
         Tue 17/09/2024 - 01:43 PM
       </h3>
+      <script>
+        function changeDateTime() {
+          let Day = prompt("What day is it?");
+          let Month = prompt("What month is it?");
+          let Year = prompt("What year is it?");
+
+          let newDate = Day + "/" + Month + "/" + Year;
+
+          document.getElementById("dateTime").innerHTML = newDate;
+        }
+      </script>
 
       <h3 onclick="changePaymentDue()" id="dueDate">Payment Due: 12/10/2024</h3>
+      <script>
+        function changePaymentDue() {
+          let dDay = prompt("What day would you like payment by?");
+          let dMonth = prompt("What month would that be?");
+          let dYear = prompt("What year is it?");
+
+          let newDueDate = dDay + "/" + dMonth + "/" + dYear;
+
+          document.getElementById("dueDate").innerHTML =
+            "Payment Due: " + newDueDate;
+        }
+      </script>
 
       <h3 class="newInvoiceGroup">--</h3>
 
@@ -67,6 +116,14 @@
         <h3 onClick="changeInvoiceID()" class="InvoiceIdNumber" id="right">
           #0053190
         </h3>
+        <script>
+          function changeInvoiceID() {
+            let invoiceID = prompt("Enter Invoice ID:");
+            if (invoiceID) {
+              document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
+            }
+          }
+        </script>
       </div>
 
       <div id="leftRightGroup">
@@ -74,12 +131,34 @@
         <h3 onClick="changeAccountName()" class="accName" id="right">
           Name Surname
         </h3>
+        <script>
+          function changeAccountName() {
+            let accountName = prompt("Enter Account Name:");
+            if (accountName) {
+              document.querySelector(".accName").innerHTML = accountName;
+            }
+          }
+        </script>
       </div>
 
       <div id="leftRightGroup">
         <h3 id="left">Sort Code:</h3>
         <h3 onClick="changeSortCode()" class="sortCode" id="right">00-00-00</h3>
-
+        <script>
+          function changeSortCode() {
+            let sortCode = prompt("Enter Sort Code (6 digits):");
+            if (sortCode && /^\d{6}$/.test(sortCode)) {
+              // Validate input is 6 digits
+              let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(
+                2,
+                4
+              )}-${sortCode.slice(4)}`;
+              document.querySelector(".sortCode").innerHTML = formattedSortCode;
+            } else {
+              alert("Please enter a valid 6-digit sort code.");
+            }
+          }
+        </script>
       </div>
 
       <div id="leftRightGroup">
@@ -448,46 +527,38 @@
     </div>
 
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-about">
-          <h4>About Us</h4>
-          <p>
-            A payment tracking and invoice generation platform to help you
-            manage your finances with ease.
+        <div class="footer-container">
+          <div class="footer-about">
+            <h4>About Us</h4>
+            <p>
+              A payment tracking and invoice generation platform to help you manage your finances with ease.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="invoice.html">Create Now</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="404.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>Email: <a href="mailto:support@paymenttracker.com">support@paymenttracker.com</a></li>
+              <li>Phone: <a href="tel:+123456789">+123-456-789</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Slipstream . All rights reserved.</p>
+          <p>Follow us on:
+            <a href="404.html" aria-label="Facebook">Facebook</a> |
+            <a href="404.html" aria-label="Twitter">Twitter</a> |
+            <a href="404.html" aria-label="LinkedIn">LinkedIn</a>
           </p>
         </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="invoice.html">Create Now</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="404.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>
-              Email:
-              <a href="mailto:support@paymenttracker.com"
-                >support@paymenttracker.com</a
-              >
-            </li>
-            <li>Phone: <a href="tel:+123456789">+123-456-789</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2024 Slipstream . All rights reserved.</p>
-        <p>
-          Follow us on: <a href="404.html" aria-label="Facebook">Facebook</a> |
-          <a href="404.html" aria-label="Twitter">Twitter</a> |
-          <a href="404.html" aria-label="LinkedIn">LinkedIn</a>
-        </p>
-      </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+      </footer>
   </body>
 </html>
