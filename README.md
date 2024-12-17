@@ -646,13 +646,29 @@ unconventional way.
   />
 
   <h3>Favicon</h3>
-  <p>The favicon was custom-made in favicon.cc, a website I discovered a few months ago. I liked the idea of a retro favicon reminiscent of those you'd see in the early 2000s and late 1990s. The low-resolution style that favicon.cc offers is perfect for this project.</p>
-  <img width="1440" alt="Screenshot 2024-12-16 at 15 20 20" src="https://github.com/user-attachments/assets/886b8cea-63d5-4e84-8263-37b592ba384d" />
+  <p>
+    The favicon was custom-made in favicon.cc, a website I discovered a few
+    months ago. I liked the idea of a retro favicon reminiscent of those you'd
+    see in the early 2000s and late 1990s. The low-resolution style that
+    favicon.cc offers is perfect for this project.
+  </p>
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 20 20"
+    src="https://github.com/user-attachments/assets/886b8cea-63d5-4e84-8263-37b592ba384d"
+  />
 
   <h3>Error 404 page</h3>
-  <p>I had a lot of fun styling various aspects of the website into more nostalgic-analog type designs. I am inspired heavily by Pieter Levels (a popular indie developer.) and his website https://pieter.com/</p>
-  <img width="1440" alt="Screenshot 2024-12-16 at 15 28 41" src="https://github.com/user-attachments/assets/1fe24bd2-4f8c-4ce0-b12a-4bf23f3a302b" />
-
+  <p>
+    I had a lot of fun styling various aspects of the website into more
+    nostalgic-analog type designs. I am inspired heavily by Pieter Levels (a
+    popular indie developer.) and his website https://pieter.com/
+  </p>
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 28 41"
+    src="https://github.com/user-attachments/assets/1fe24bd2-4f8c-4ce0-b12a-4bf23f3a302b"
+  />
 
   <h3>Accessibility Features</h3>
   <ul>
@@ -772,8 +788,8 @@ unconventional way.
 
 <h3>Structure</h3>
 <p>
-  The website structure includes a homepage, an invoicing page, and a pricing page,
-  all linked by a sticky navigation bar.
+  The website structure includes a homepage, an invoicing page, and a pricing
+  page, all linked by a sticky navigation bar.
 </p>
 
 <h3>Skeleton</h3>
@@ -804,21 +820,32 @@ unconventional way.
   A sticky navigation bar that links to the homepage, invoice page, and pricing
   page. Includes a logo and links to key sections.
 
-  <img width="1440" alt="Screenshot 2024-12-16 at 15 45 51" src="https://github.com/user-attachments/assets/64dfc6ef-4045-4179-baeb-bb8aa778584f" />
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 45 51"
+    src="https://github.com/user-attachments/assets/64dfc6ef-4045-4179-baeb-bb8aa778584f"
+  />
 </p>
 
 <h3>Section: Footer</h3>
-<p>Contains quick links, contact info, and a copyright statement.
-<img width="1440" alt="Screenshot 2024-12-16 at 15 46 46" src="https://github.com/user-attachments/assets/87194524-1095-469f-9429-4318865c445d" />
+<p>
+  Contains quick links, contact info, and a copyright statement.
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 46 46"
+    src="https://github.com/user-attachments/assets/87194524-1095-469f-9429-4318865c445d"
+  />
 </p>
-
 
 <h3>Webpage: Homepage</h3>
 <p>
   Welcomes users with a brief description of the tool. Prominently displays a
   call-to-action button to start generating an invoice.
-<img width="1440" alt="Screenshot 2024-12-16 at 15 47 26" src="https://github.com/user-attachments/assets/e81968b4-2a17-448f-a014-e8136e84d7ad" />
-
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 47 26"
+    src="https://github.com/user-attachments/assets/e81968b4-2a17-448f-a014-e8136e84d7ad"
+  />
 </p>
 
 <h3>Popup: How to Use</h3>
@@ -826,8 +853,11 @@ unconventional way.
   Step-by-step instructions for using the invoice generator. Provides guidance
   on how to customize fields and download the invoice.
 
-  <img width="1440" alt="Screenshot 2024-12-16 at 15 47 55" src="https://github.com/user-attachments/assets/4e11e732-e507-481d-ba9b-24042d395e06" />
-
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 47 55"
+    src="https://github.com/user-attachments/assets/4e11e732-e507-481d-ba9b-24042d395e06"
+  />
 </p>
 
 <h3>Webpage: 404</h3>
@@ -835,8 +865,11 @@ unconventional way.
   Custom 404-page guiding users back to the homepage or offering links to key
   pages.
 
-  <img width="1440" alt="Screenshot 2024-12-16 at 15 28 41" src="https://github.com/user-attachments/assets/b6dc2972-ee21-42b9-9be7-8a72f7356a00" />
-
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 28 41"
+    src="https://github.com/user-attachments/assets/b6dc2972-ee21-42b9-9be7-8a72f7356a00"
+  />
 </p>
 
 <h2>Structure</h2>
@@ -854,9 +887,9 @@ unconventional way.
 
 <h3>Interactive Experience</h3>
 <p>
-  Users interact with dynamic fields (editable text, date pickers) to
-  customize their invoices. Features like background texture change, modal
-  dialogs, and a reset button enhance the user experience.
+  Users interact with dynamic fields (editable text, date pickers) to customize
+  their invoices. Features like background texture change, modal dialogs, and a
+  reset button enhance the user experience.
 </p>
 
 <h2>Changes During Development</h2>
@@ -866,13 +899,11 @@ unconventional way.
   smaller screens.
 </p>
 
-
 <h3>Results Modal</h3>
 <p>Displays a success message after generating an invoice.</p>
 
 <h3>404 Page Message</h3>
 <p>A custom error message that guides users back to the homepage.</p>
-
 
 <h1>Testing</h1>
 <p>
@@ -881,56 +912,95 @@ unconventional way.
 </p>
 
 <h3>Responsivness</h3>
-<p>Utilized Chrome dev tools as well as https://responsivedesignchecker.com/ to check responsiveness of all my web pages and to ensure that the website was functional across all screen sizes. 
+<p>
+  Utilized Chrome dev tools as well as https://responsivedesignchecker.com/ to
+  check responsiveness of all my web pages and to ensure that the website was
+  functional across all screen sizes.
 
-<img width="1440" alt="Screenshot 2024-12-16 at 15 55 27" src="https://github.com/user-attachments/assets/79105195-84bc-4905-acbd-d600468cf053" />
-<img width="1440" alt="Screenshot 2024-12-16 at 15 55 48" src="https://github.com/user-attachments/assets/8ae006f7-c6ed-4656-9527-305b4be896ca" />
-<img width="1440" alt="Screenshot 2024-12-16 at 15 55 53" src="https://github.com/user-attachments/assets/8ed356cb-ef27-43f3-94c6-0111bb885b17" />
-<img width="1440" alt="Screenshot 2024-12-16 at 15 59 26" src="https://github.com/user-attachments/assets/74a0f739-76db-4644-bdd0-8c2201ce3e1e" />
-
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 55 27"
+    src="https://github.com/user-attachments/assets/79105195-84bc-4905-acbd-d600468cf053"
+  />
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 55 48"
+    src="https://github.com/user-attachments/assets/8ae006f7-c6ed-4656-9527-305b4be896ca"
+  />
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 55 53"
+    src="https://github.com/user-attachments/assets/8ed356cb-ef27-43f3-94c6-0111bb885b17"
+  />
+  <img
+    width="1440"
+    alt="Screenshot 2024-12-16 at 15 59 26"
+    src="https://github.com/user-attachments/assets/74a0f739-76db-4644-bdd0-8c2201ce3e1e"
+  />
 </p>
 
 <h3>Lighthouse Testing</h3>
-<p>I tested all pages with Chrome's Lighthouse performance tester. </p>
+<p>I tested all pages with Chrome's Lighthouse performance tester.</p>
 
 <ul>
   <li>
     <h4>Desktop Testing</h4>
-  <ol>
-    <li>
-      Home page
-      <img width="1440" alt="Screenshot 2024-12-16 at 16 03 36" src="https://github.com/user-attachments/assets/b8fbd906-c3d4-4bbf-9763-31558955b848" />
-  </li>     
-    <li>Invoice Page
-   <img width="1440" alt="Screenshot 2024-12-16 at 16 03 54" src="https://github.com/user-attachments/assets/88c10c78-0b96-4a9b-bd5e-23393ee67ed1" />
- 
-  </li>
-  <li>
-    Pricing Page
-    <img width="1440" alt="Screenshot 2024-12-16 at 16 04 55" src="https://github.com/user-attachments/assets/b95cfa1d-4135-4b73-ba3f-2b1bdeeba4e7" />
-
-  </li>
-  </ol>  
+    <ol>
+      <li>
+        Home page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 03 36"
+          src="https://github.com/user-attachments/assets/b8fbd906-c3d4-4bbf-9763-31558955b848"
+        />
+      </li>
+      <li>
+        Invoice Page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 03 54"
+          src="https://github.com/user-attachments/assets/88c10c78-0b96-4a9b-bd5e-23393ee67ed1"
+        />
+      </li>
+      <li>
+        Pricing Page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 04 55"
+          src="https://github.com/user-attachments/assets/b95cfa1d-4135-4b73-ba3f-2b1bdeeba4e7"
+        />
+      </li>
+    </ol>
   </li>
 
   <li>
     <h4>Mobile Testing</h4>
     <ol>
-   <li>Home Page
-   <img width="1440" alt="Screenshot 2024-12-16 at 16 01 40" src="https://github.com/user-attachments/assets/d1499a31-22bf-455a-83c3-07a2e1ca5859" />
-   </li>
-     <li>
-    Invoice Page
-       <img width="1440" alt="Screenshot 2024-12-16 at 16 03 14" src="https://github.com/user-attachments/assets/9c921889-ff92-437d-b1a8-6fa0264593f7" />
-
-
-  </li>
-  <li>
-    Pricing page
-    <img width="1440" alt="Screenshot 2024-12-16 at 16 02 46" src="https://github.com/user-attachments/assets/2cc269de-be2a-457c-ab1f-a5c75a62e10c" />
-
-  </li>
-  </ol>
+      <li>
+        Home Page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 01 40"
+          src="https://github.com/user-attachments/assets/d1499a31-22bf-455a-83c3-07a2e1ca5859"
+        />
+      </li>
+      <li>
+        Invoice Page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 03 14"
+          src="https://github.com/user-attachments/assets/9c921889-ff92-437d-b1a8-6fa0264593f7"
+        />
+      </li>
+      <li>
+        Pricing page
+        <img
+          width="1440"
+          alt="Screenshot 2024-12-16 at 16 02 46"
+          src="https://github.com/user-attachments/assets/2cc269de-be2a-457c-ab1f-a5c75a62e10c"
+        />
+      </li>
+    </ol>
   </li>
 </ul>
 
@@ -946,6 +1016,103 @@ unconventional way.
   development.
 </p>
 
-<h2>Deployment</h2> <p>Slipstream was deployed using GitHub Pages, ensuring the project is publicly accessible and easy to use. Below, you’ll find instructions for accessing the deployed site, running it locally, and contributing to the project.</p> <h3>Deployment to GitHub Pages</h3> <p>The project has been deployed using GitHub Pages for a seamless, public-facing experience. It is hosted at the following URL:</p> <ul> <li><a href="https://lukeromburgh.github.io/invoiceGenerator/index.html" target="_blank">Live Project</a></li> </ul> <h3>Steps for Local Deployment</h3> <p>If you wish to run the project locally, follow these steps:</p> <ol> <li>Clone the repository to your local machine using Git or by downloading the ZIP file:</li> <pre><code>git clone https://github.com/lukeromburgh/invoiceGenerator.git</code></pre> <li>Navigate to the cloned repository folder on your machine.</li> <li>Open the <code>index.html</code> file in any browser to launch the app locally.</li> </ol> <h3>Forking the Repository</h3> <p>If you'd like to contribute to the project, you can fork the repository and make your changes. Here’s how:</p> <ol> <li>Visit the <a href="https://github.com/lukeromburgh/invoiceGenerator" target="_blank">GitHub repository</a>.</li> <li>Click the "Fork" button in the upper right-hand corner of the page.</li> <li>Clone your forked repository to your local machine.</li> <pre><code>git clone https://github.com/your-username/invoiceGenerator.git</code></pre> <li>Make your changes, push them to your forked repository, and submit a pull request for review.</li> </ol> <h3>Handling Navigation Errors</h3> <p>To improve the user experience, a custom <code>404.html</code> page was created to handle incorrect navigation or broken links gracefully. Users who encounter invalid routes will see an informative and styled 404 page, improving site professionalism.</p>
-<h2>Credits</h2> <h3>Documentation</h3> <p>The project includes extensive inline comments and documentation, guiding users and developers through the structure, purpose, and usage of the app. For detailed explanations on functionalities and tools used, please refer to this README file.</p> <h3>Media</h3> <p>All media and images used in this project were sourced from royalty-free platforms or were self-created to ensure there are no copyright issues. This aligns with ethical development practices.</p> <h3>Code</h3> <p>All the code in this project was independently written by the developer as part of the Code Institute’s bootcamp coursework. No external template or pre-written library was used for styling or logic.</p> <h3>Acknowledgements</h3> <p>A special thanks goes out to the Code Institute’s instructors and the supportive developer community for their invaluable guidance and constructive feedback throughout this milestone project.</p>
-<p>For further details or questions about the project, feel free to explore the repository:</p> <ul> <li><a href="https://github.com/lukeromburgh/invoiceGenerator/tree/main" target="_blank">GitHub Repository</a></li> </ul>
+<h2>Deployment</h2>
+<p>
+  Slipstream was deployed using GitHub Pages, ensuring the project is publicly
+  accessible and easy to use. Below, you’ll find instructions for accessing the
+  deployed site, running it locally, and contributing to the project.
+</p>
+<h3>Deployment to GitHub Pages</h3>
+<p>
+  The project has been deployed using GitHub Pages for a seamless, public-facing
+  experience. It is hosted at the following URL:
+</p>
+<ul>
+  <li>
+    <a
+      href="https://lukeromburgh.github.io/invoiceGenerator/index.html"
+      target="_blank"
+      >Live Project</a
+    >
+  </li>
+</ul>
+<h3>Steps for Local Deployment</h3>
+<p>If you wish to run the project locally, follow these steps:</p>
+<ol>
+  <li>
+    Clone the repository to your local machine using Git or by downloading the
+    ZIP file:
+  </li>
+  <pre><code>git clone https://github.com/lukeromburgh/invoiceGenerator.git</code></pre>
+  <li>Navigate to the cloned repository folder on your machine.</li>
+  <li>
+    Open the <code>index.html</code> file in any browser to launch the app
+    locally.
+  </li>
+</ol>
+<h3>Forking the Repository</h3>
+<p>
+  If you'd like to contribute to the project, you can fork the repository and
+  make your changes. Here’s how:
+</p>
+<ol>
+  <li>
+    Visit the
+    <a href="https://github.com/lukeromburgh/invoiceGenerator" target="_blank"
+      >GitHub repository</a
+    >.
+  </li>
+  <li>Click the "Fork" button in the upper right-hand corner of the page.</li>
+  <li>Clone your forked repository to your local machine.</li>
+  <pre><code>git clone https://github.com/your-username/invoiceGenerator.git</code></pre>
+  <li>
+    Make your changes, push them to your forked repository, and submit a pull
+    request for review.
+  </li>
+</ol>
+<h3>Handling Navigation Errors</h3>
+<p>
+  To improve the user experience, a custom <code>404.html</code> page was
+  created to handle incorrect navigation or broken links gracefully. Users who
+  encounter invalid routes will see an informative and styled 404 page,
+  improving site professionalism.
+</p>
+<h2>Credits</h2>
+<h3>Documentation</h3>
+<p>
+  The project includes extensive inline comments and documentation, guiding
+  users and developers through the structure, purpose, and usage of the app. For
+  detailed explanations on functionalities and tools used, please refer to this
+  README file.
+</p>
+<h3>Media</h3>
+<p>
+  All media and images used in this project were sourced from royalty-free
+  platforms or were self-created to ensure there are no copyright issues. This
+  aligns with ethical development practices.
+</p>
+<h3>Code</h3>
+<p>
+  All the code in this project was independently written by the developer as
+  part of the Code Institute’s bootcamp coursework. No external template or
+  pre-written library was used for styling or logic.
+</p>
+<h3>Acknowledgements</h3>
+<p>
+  A special thanks goes out to the Code Institute’s instructors and the
+  supportive developer community for their invaluable guidance and constructive
+  feedback throughout this milestone project.
+</p>
+<p>
+  For further details or questions about the project, feel free to explore the
+  repository:
+</p>
+<ul>
+  <li>
+    <a
+      href="https://github.com/lukeromburgh/invoiceGenerator/tree/main"
+      target="_blank"
+      >GitHub Repository</a
+    >
+  </li>
+</ul>

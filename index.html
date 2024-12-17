@@ -1,197 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-       
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-        
-        <title>Design Quote Generator</title>
-        <link rel=stylesheet href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-        <script>
-            function updateButtonText() {
-              const button = document.querySelector('.CTA');
-              
-              if (window.innerWidth <= 620) {
-                button.textContent = 'Start Free'; // Change text for small screens
-              } else {
-                button.textContent = 'Start Free — Create Your First Receipt in Seconds'; // Revert text for larger screens
-              }
-            }
-          
-            // Run function on window resize and initial load
-            window.addEventListener('resize', updateButtonText);
-            window.addEventListener('load', updateButtonText);
-          </script>
-          
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
 
-    </head>
-    <body>
+    <title>Design Quote Generator</title>
+    <link rel="stylesheet" href="styles.css" />
 
-        <nav>
-            <div class="logo">
-                <img src="images/logo.jpg" alt="logo of slipstream">
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="invoice.html">Invoice</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-            </ul>
-        </nav>
+    <script>
+      function updateButtonText() {
+        const button = document.querySelector(".CTA");
 
-        
+        if (window.innerWidth <= 620) {
+          button.textContent = "Start Free"; // Change text for small screens
+        } else {
+          button.textContent =
+            "Start Free — Create Your First Receipt in Seconds"; // Revert text for larger screens
+        }
+      }
+
+      // Run function on window resize and initial load
+      window.addEventListener("resize", updateButtonText);
+      window.addEventListener("load", updateButtonText);
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.jpg" alt="logo of slipstream" />
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="invoice.html">Invoice</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+    </nav>
+
     <section class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in-item">Turn Bills Into Fun with Custom Receipt Invoices</h1>
-            <p class="fade-in-item">Create and share personalized, receipt-style invoices that stand out—whether you’re splitting the check with friends or sending invoices to clients.</p>
+      <div class="hero-content">
+        <h1 class="fade-in-item">
+          Turn Bills Into Fun with Custom Receipt Invoices
+        </h1>
+        <p class="fade-in-item">
+          Create and share personalized, receipt-style invoices that stand
+          out—whether you’re splitting the check with friends or sending
+          invoices to clients.
+        </p>
 
-            <div class="hero-buttons fade-in-item">
-                <a href="invoice.html">
-                    <button type="button" class="CTA btn btn-primary fade-in-item slide-in-left">Start Free — Create Your First Receipt in Seconds</button>
-                </a>
-            </div>
+        <div class="hero-buttons fade-in-item">
+          <a href="invoice.html">
+            <button
+              type="button"
+              class="CTA btn btn-primary fade-in-item slide-in-left"
+            >
+              Start Free — Create Your First Receipt in Seconds
+            </button>
+          </a>
         </div>
-        <div class="hero-image fade-in-item">
-            <img alt="An image depicting the layout of a few receipts made with Slipstream" class="heroImg" src="images/hero-image2.webp">
-        </div>
+      </div>
+      <div class="hero-image fade-in-item">
+        <img
+          alt="An image depicting the layout of a few receipts made with Slipstream"
+          class="heroImg"
+          src="images/hero-image2.webp"
+        />
+      </div>
     </section>
 
     <section class="features">
-        <div class="features-content">
-            <h2>Tired of boring invoices? Send memorable, receipt-like invoices in a few clicks. Ideal for freelancers, creatives, and friends who want to make getting paid a bit more fun.</h2>
-            <a href="invoice.html">
-                <button type="button" class="btn btn-primary">Try Now</button>
-            </a>
-        </div>
+      <div class="features-content">
+        <h2>
+          Tired of boring invoices? Send memorable, receipt-like invoices in a
+          few clicks. Ideal for freelancers, creatives, and friends who want to
+          make getting paid a bit more fun.
+        </h2>
+        <a href="invoice.html">
+          <button type="button" class="btn btn-primary">Try Now</button>
+        </a>
+      </div>
     </section>
 
-        <div class="banner">
-            <h2>Invoice <span>With a Twist</span></h2>
+    <div class="banner">
+      <h2>Invoice <span>With a Twist</span></h2>
+    </div>
+
+    <div class="gradient1"></div>
+
+    <section class="feature-list">
+      <div id="feature-one">
+        <img
+          alt="share feature"
+          class="feature-one-image"
+          src="images/feature1.webp"
+        />
+        <div class="feature-text-box">
+          <h3 class="feature-header">Simple, Instant Creation</h3>
+          <p class="feature-text">
+            Create a personalized receipt-style invoice in less than a minute.
+            No need for complex forms or design skills.
+          </p>
+        </div>
+      </div>
+
+      <div id="feature-two">
+        <div class="feature-text-box">
+          <h3 class="feature-header">Perfect for Freelancers</h3>
+          <p class="feature-text">
+            Keep your invoices professional, creative, and on-brand. Impress
+            clients and get paid faster.
+          </p>
+        </div>
+        <img
+          alt="Form of bank details page"
+          class="feature-two-image"
+          src="images/feature2.webp"
+        />
+      </div>
+
+      <div id="feature-three">
+        <img
+          alt="payment tracking page, graph and metrics"
+          class="feature-three-image"
+          src="images/feature3.webp"
+        />
+        <div class="feature-text-box">
+          <h3 class="feature-header">Track Payments</h3>
+          <p class="feature-text">
+            Monitor who’s paid you, with smart notifications and tracking
+            features.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient2"></div>
+
+    <!--Tutorial for slider https://www.youtube.com/watch?v=Reu0hHbis5w-->
+    <section class="social-proof">
+      <div class="slider">
+        <h2>Used by companies you love</h2>
+        <div class="slide-track">
+          <div class="slide">
+            <img src="images/711-logo.png" alt="Logo 1" />
+          </div>
+          <div class="slide">
+            <img src="images/accenture-logo.png" alt="Logo 2" />
+          </div>
+          <div class="slide">
+            <img src="images/amazon-logo.png" alt="Logo 3" />
+          </div>
+          <div class="slide">
+            <img src="images/amex-logo.png" alt="Logo 4" />
+          </div>
+          <div class="slide">
+            <img src="images/apple-logo.png" alt="Logo 5" />
+          </div>
+          <div class="slide">
+            <img src="images/bbc-logo.png" alt="Logo 6" />
+          </div>
+          <div class="slide">
+            <img src="images/bic-logo.png" alt="Logo 7" />
+          </div>
+          <div class="slide">
+            <img src="images/cash-app-logo.png" alt="Logo 8" />
+          </div>
+          <div class="slide">
+            <img src="images/bolt-logo.png" alt="Logo 9" />
+          </div>
+          <div class="slide">
+            <img src="images/booking-logo.png" alt="Logo 10" />
+          </div>
+          <!-- Duplicate slides to ensure smooth infinite scrolling -->
+          <div class="slide">
+            <img src="images/711-logo.png" alt="Logo 1" />
+          </div>
+          <div class="slide">
+            <img src="images/accenture-logo.png" alt="Logo 2" />
+          </div>
+          <div class="slide">
+            <img src="images/amazon-logo.png" alt="Logo 3" />
+          </div>
+          <div class="slide">
+            <img src="images/amex-logo.png" alt="Logo 4" />
+          </div>
+          <div class="slide">
+            <img src="images/apple-logo.png" alt="Logo 5" />
+          </div>
+          <div class="slide">
+            <img src="images/bbc-logo.png" alt="Logo 6" />
+          </div>
+          <div class="slide">
+            <img src="images/bic-logo.png" alt="Logo 7" />
+          </div>
+          <div class="slide">
+            <img src="images/cash-app-logo.png" alt="Logo 8" />
+          </div>
+          <div class="slide">
+            <img src="images/bolt-logo.png" alt="Logo 9" />
+          </div>
+          <div class="slide">
+            <img src="images/booking-logo.png" alt="Logo 10" />
+          </div>
+        </div>
+      </div>
+
+      <h2>And loved by people like you</h2>
+
+      <div class="review-card">
+        <div class="profile">
+          <img
+            alt="headshot of reviewer"
+            class="review-image"
+            src="images/DALL·E Ruby Headshot.webp"
+          />
+          <h3 class="review-name">Ruby Fitzgerald</h3>
         </div>
 
-        <div class="gradient1"></div>
+        <div class="stars-container">
+          <img alt="5 star rating" class="stars" src="images/stars.jpg" />
+        </div>
 
-        <section class="feature-list">
-            <div id="feature-one">
-                <img alt="share feature" class="feature-one-image" src="images/feature1.webp">
-                <div class="feature-text-box">
-                    <h3 class="feature-header">Simple, Instant Creation</h3>
-                    <p class="feature-text">Create a personalized receipt-style invoice in less than a minute. No need for complex forms or design skills.</p>
-                </div>
-            </div>
+        <div class="review-paragraph">
+          <span style="font-weight: 600"
+            >Incredible Tool for Managing Payments and Invoices!</span
+          >
 
+          I've been using this payment tracking and invoice generator website
+          for a few months now, and it has completely transformed how I manage
+          my finances. Invoice Generation: Creating professional invoices is a
+          breeze! I can customize them with my logo, download them as PDFs, or
+          send them directly to clients. This website saves me so much time and
+          effort. If you're a freelancer or small business owner looking for a
+          reliable solution to track payments and create invoices, look no
+          further. Highly recommended!
+        </div>
+      </div>
+    </section>
 
-            <div id="feature-two">
-                <div class="feature-text-box">
-                    <h3 class="feature-header">Perfect for Freelancers</h3>
-                    <p class="feature-text">Keep your invoices professional, creative, and on-brand. Impress clients and get paid faster.</p>
-                </div>
-                <img alt="Form of bank details page" class="feature-two-image" src="images/feature2.webp">
-            </div>
-
-
-            <div id="feature-three">
-                <img alt="payment tracking page, graph and metrics" class="feature-three-image" src="images/feature3.webp">
-                <div class="feature-text-box">
-                    <h3 class="feature-header">Track Payments</h3>
-                    <p class="feature-text">Monitor who’s paid you, with smart notifications and tracking features.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="gradient2"></div>
-
-        <section class="social-proof">
-            <div class="slider">
-                <h2>Used by companies you love</h2>
-                <div class="slide-track">
-                  <div class="slide"><img src="images/711-logo.png" alt="Logo 1"></div>
-                  <div class="slide"><img src="images/accenture-logo.png" alt="Logo 2"></div>
-                  <div class="slide"><img src="images/amazon-logo.png" alt="Logo 3"></div>
-                  <div class="slide"><img src="images/amex-logo.png" alt="Logo 4"></div>
-                  <div class="slide"><img src="images/apple-logo.png" alt="Logo 5"></div>
-                  <div class="slide"><img src="images/bbc-logo.png" alt="Logo 6"></div>
-                  <div class="slide"><img src="images/bic-logo.png" alt="Logo 7"></div>
-                  <div class="slide"><img src="images/cash-app-logo.png" alt="Logo 8"></div>
-                  <div class="slide"><img src="images/bolt-logo.png" alt="Logo 9"></div>
-                  <div class="slide"><img src="images/booking-logo.png" alt="Logo 10"></div>
-                  <!-- Duplicate slides to ensure smooth infinite scrolling -->
-                  <div class="slide"><img src="images/711-logo.png" alt="Logo 1"></div>
-                  <div class="slide"><img src="images/accenture-logo.png" alt="Logo 2"></div>
-                  <div class="slide"><img src="images/amazon-logo.png" alt="Logo 3"></div>
-                  <div class="slide"><img src="images/amex-logo.png" alt="Logo 4"></div>
-                  <div class="slide"><img src="images/apple-logo.png" alt="Logo 5"></div>
-                  <div class="slide"><img src="images/bbc-logo.png" alt="Logo 6"></div>
-                  <div class="slide"><img src="images/bic-logo.png" alt="Logo 7"></div>
-                  <div class="slide"><img src="images/cash-app-logo.png" alt="Logo 8"></div>
-                  <div class="slide"><img src="images/bolt-logo.png" alt="Logo 9"></div>
-                  <div class="slide"><img src="images/booking-logo.png" alt="Logo 10"></div>
-                </div>
-              </div>
-
-              <h2>And loved by people like you</h2>
-              
-
-              <div class="review-card">
-                    <div class="profile">
-                        <img alt="headshot of reviewer" class="review-image" src="images/DALL·E Ruby Headshot.webp">
-                        <h3 class="review-name">Ruby Fitzgerald</h3>
-                    </div>
-
-                    <div class="stars-container">
-                        <img alt="5 star rating" class="stars" src="images/stars.jpg">
-                    </div>
-                    
-                    <div class="review-paragraph">
-                        <span style="font-weight: 600;">Incredible Tool for Managing Payments and Invoices!</span>
-
-                        I've been using this payment tracking and invoice generator website for a few months now, and it has completely transformed how I manage my finances.
-
-                        Invoice Generation: Creating professional invoices is a breeze! I can customize them with my logo, download them as PDFs, or send them directly to clients.
-                        This website saves me so much time and effort. If you're a freelancer or small business owner looking for a reliable solution to track payments and create invoices, look no further. Highly recommended!
-                    </div> 
-
-                </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-container">
-              <div class="footer-about">
-                <h4>About Us</h4>
-                <p>
-                  A payment tracking and invoice generation platform to help you manage your finances with ease.
-                </p>
-              </div>
-              <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="invoice.html">Create Now</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="404.html">Contact</a></li>
-                </ul>
-              </div>
-              <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <ul>
-                  <li>Email: <a href="mailto:support@paymenttracker.com">support@paymenttracker.com</a></li>
-                  <li>Phone: <a href="tel:+123456789">+123-456-789</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>© 2024 Slipstream . All rights reserved.</p>
-              <p>Follow us on:
-                <a href="404.html" aria-label="Facebook">Facebook</a> |
-                <a href="404.html" aria-label="Twitter">Twitter</a> |
-                <a href="404.html" aria-label="LinkedIn">LinkedIn</a>
-              </p>
-            </div>
-          </footer>
-
-    </body>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h4>About Us</h4>
+          <p>
+            A payment tracking and invoice generation platform to help you
+            manage your finances with ease.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="invoice.html">Create Now</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="404.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:support@paymenttracker.com"
+                >support@paymenttracker.com</a
+              >
+            </li>
+            <li>Phone: <a href="tel:+123456789">+123-456-789</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Slipstream . All rights reserved.</p>
+        <p>
+          Follow us on: <a href="404.html" aria-label="Facebook">Facebook</a> |
+          <a href="404.html" aria-label="Twitter">Twitter</a> |
+          <a href="404.html" aria-label="LinkedIn">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
