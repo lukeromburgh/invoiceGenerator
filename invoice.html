@@ -74,34 +74,12 @@
         <h3 onClick="changeAccountName()" class="accName" id="right">
           Name Surname
         </h3>
-        <script>
-          function changeAccountName() {
-            let accountName = prompt("Enter Account Name:");
-            if (accountName) {
-              document.querySelector(".accName").innerHTML = accountName;
-            }
-          }
-        </script>
       </div>
 
       <div id="leftRightGroup">
         <h3 id="left">Sort Code:</h3>
         <h3 onClick="changeSortCode()" class="sortCode" id="right">00-00-00</h3>
-        <script>
-          function changeSortCode() {
-            let sortCode = prompt("Enter Sort Code (6 digits):");
-            if (sortCode && /^\d{6}$/.test(sortCode)) {
-              // Validate input is 6 digits
-              let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(
-                2,
-                4
-              )}-${sortCode.slice(4)}`;
-              document.querySelector(".sortCode").innerHTML = formattedSortCode;
-            } else {
-              alert("Please enter a valid 6-digit sort code.");
-            }
-          }
-        </script>
+
       </div>
 
       <div id="leftRightGroup">
