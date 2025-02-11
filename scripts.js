@@ -3,19 +3,24 @@
 /* ======================================================
    Function: Update Button Text Dynamically (index.html)
    ====================================================== */
-   function updateButtonText() {
-    const button = document.querySelector(".CTA");
-    if (!button) return; // Prevent errors if the button element doesn't exist
-    button.textContent = window.innerWidth <= 620 
+function updateButtonText() {
+  const button = document.querySelector(".CTA");
+  if (!button) {
+    return;
+  }
+
+  // Prevent errors if the button element doesn't exist
+  button.textContent =
+    window.innerWidth <= 620
       ? "Start Free"
       : "Start Free — Create Your First Receipt in Seconds";
-  }
-  
-  // Wait for DOM content to load before attaching event listeners
-  window.addEventListener("DOMContentLoaded", () => {
-    updateButtonText();
-    window.addEventListener("resize", updateButtonText);
-  });
+}
+
+// Wait for DOM content to load before attaching event listeners
+window.addEventListener("DOMContentLoaded", () => {
+  updateButtonText();
+  window.addEventListener("resize", updateButtonText);
+});
 
 /* ======================================================
      Functions: Editable Invoice Fields (invoice.html)
