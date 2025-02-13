@@ -4,11 +4,7 @@
    Function: Update Button Text Dynamically (index.html)
    ====================================================== */
 function updateButtonText() {
-  const button = document.querySelector(".CTA");
-  if (!button) {
-    return;
-  }
-
+  const button = document.querySelector(".callToAction");
   // Prevent errors if the button element doesn't exist
   button.textContent =
     window.innerWidth <= 620
@@ -76,7 +72,7 @@ function changePaymentDue() {
 function changeInvoiceID() {
   let invoiceID = prompt("Enter Invoice ID:");
   if (invoiceID) {
-    document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
+    document.querySelector(".invoiceIdNumber").innerHTML = invoiceID;
   }
 }
 

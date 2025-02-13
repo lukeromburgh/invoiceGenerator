@@ -37,7 +37,6 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="invoice.html">Invoice</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
       </ul>
     </nav>
 
@@ -113,14 +112,14 @@
 
       <div id="leftRightGroup">
         <h3 id="left">Invoice ID:</h3>
-        <h3 onClick="changeInvoiceID()" class="InvoiceIdNumber" id="right">
+        <h3 onClick="changeInvoiceID()" class="invoiceIdNumber" id="right">
           #0053190
         </h3>
         <script>
           function changeInvoiceID() {
             let invoiceID = prompt("Enter Invoice ID:");
             if (invoiceID) {
-              document.querySelector(".InvoiceIdNumber").innerHTML = invoiceID;
+              document.querySelector(".invoiceIdNumber").innerHTML = invoiceID;
             }
           }
         </script>
@@ -401,7 +400,7 @@
       </script>
 
       <button onclick="sendInvoice()" class="btn btn-primary btn-invoice">
-        Send Invoice
+        Save as PDF
       </button>
 
       <button
@@ -507,7 +506,7 @@
                   .getElementById("designerName")
                   .textContent.replace("designer: ", ""),
                 invoice_id:
-                  document.querySelector(".InvoiceIdNumber").textContent,
+                  document.querySelector(".invoiceIdNumber").textContent,
                 pdf_attachment: pdfData, // Base64-encoded PDF
               };
 
