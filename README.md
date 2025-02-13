@@ -911,6 +911,44 @@ unconventional way.
   modals, and responsive design.
 </p>
 
+<h3>What is manual testing</h3>
+<p>
+
+Requirement Analysis:
+
+Understand the Requirements: Review specifications, user stories, or business requirements to identify what needs to be tested.
+Identify Test Scenarios: Determine the areas of the application that are critical and need focused testing.
+Test Planning:
+
+Define Scope and Objectives: Outline what features and functionalities will be tested.
+Resource Planning: Determine the team members, tools, and time required for testing.
+Risk Analysis: Identify potential risks and decide on contingency plans.
+Test Case Design:
+
+Write Detailed Test Cases: Develop test cases that cover various use cases, including positive, negative, and edge cases.
+Test Data Preparation: Create or gather the necessary data to execute the test cases.
+Test Environment Setup:
+
+Configure the Test Environment: Set up the hardware, software, and network configurations to mimic the production environment as closely as possible.
+Test Execution:
+
+Run Test Cases Manually: Execute each test case step-by-step as written, recording the results for each test.
+Exploratory Testing: In addition to scripted tests, testers may explore the application freely to discover unexpected behaviors.
+Defect Reporting:
+
+Log Issues: Document any discrepancies or bugs found, including details on how to reproduce them, the expected versus actual behavior, and the environment details.
+Severity and Priority: Assign a severity level and priority to help developers address the issues effectively.
+Retesting and Regression Testing:
+
+Retest Fixed Issues: Once defects are resolved, retest to ensure the fixes work as expected.
+Regression Testing: Verify that new changes haven't adversely affected existing functionalities.
+Test Closure:
+
+Review and Document Results: Summarize the testing efforts, detailing what was tested, what defects were found, and overall software quality.
+Lessons Learned: Gather feedback and insights to improve future testing cycles.
+  
+</p>
+
 <h3>Responsivness</h3>
 <p>
   Utilized Chrome dev tools as well as https://responsivedesignchecker.com/ to
