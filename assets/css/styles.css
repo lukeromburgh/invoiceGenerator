@@ -1027,6 +1027,7 @@ nav ul li a:hover {
   background-size: cover; /* Ensures the texture covers the entire div */
   background-position: center; /* Center the texture */
   background-repeat: no-repeat; /* Prevent the texture from repeating */
+  background-color: #f0f0f0;
 }
 
 .Invoice h2 {
