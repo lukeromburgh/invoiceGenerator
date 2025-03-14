@@ -1023,7 +1023,7 @@ nav ul li a:hover {
 
 #invoice-div {
   margin-top: 40px;
-  background-image: url("images/paper-texture.webp"); /* Path to your paper texture image */
+  background-image: url("assets/images/paper-texture.webp"); /* Path to your paper texture image */
   background-size: cover; /* Ensures the texture covers the entire div */
   background-position: center; /* Center the texture */
   background-repeat: no-repeat; /* Prevent the texture from repeating */

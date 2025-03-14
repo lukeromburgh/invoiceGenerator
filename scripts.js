@@ -1,130 +1,167 @@
 // scripts.js
+/*global window, document, html2canvas, emailjs, html2pdf */
 
 /* ======================================================
    Function: Update Button Text Dynamically (index.html)
    ====================================================== */
 function updateButtonText() {
+  "use strict";
   const button = document.querySelector(".callToAction");
   // Prevent errors if the button element doesn't exist
-  button.textContent =
-    window.innerWidth <= 620
-      ? "Start Free"
-      : "Start Free — Create Your First Receipt in Seconds";
+  if (button) {
+    button.textContent =
+      window.innerWidth <= 620
+        ? "Start Free"
+        : "Start Free — Create Your First Receipt in Seconds";
+  }
 }
 
 // Wait for DOM content to load before attaching event listeners
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", function () {
+  "use strict";
   updateButtonText();
   window.addEventListener("resize", updateButtonText);
 });
 
 /* ======================================================
-     Functions: Editable Invoice Fields (invoice.html)
-     ====================================================== */
+       Functions: Editable Invoice Fields (invoice.html)
+       ====================================================== */
 // Helper function: Prompt and replace text for a specific element
-function promptAndReplace(elementId, message, prefix = "") {
-  const newValue = prompt(message);
+function promptAndReplace(elementId, message, prefix) {
+  "use strict";
+  prefix = prefix || ""; // Default parameter value
+  const newValue = window.prompt(message);
   if (newValue) {
     document.getElementById(elementId).innerHTML = prefix + ": " + newValue;
   }
 }
+
 function changeName() {
-  let name = prompt("What is your name?");
-  document.getElementById("designerName").innerHTML = "designer: " + name;
+  "use strict";
+  const name = window.prompt("What is your name?");
+  if (name) {
+    document.getElementById("designerName").innerHTML = "designer: " + name;
+  }
 }
 
 function changeEmail() {
-  let newEmail = prompt("What is your email?", "email@test.com");
-  document.getElementById("email").innerHTML = newEmail;
+  "use strict";
+  const newEmail = window.prompt("What is your email?", "email@test.com");
+  if (newEmail) {
+    document.getElementById("email").innerHTML = newEmail;
+  }
 }
 
 function changeSocial() {
-  let newSocial = prompt("What is your @?");
-  document.getElementById("social").innerHTML = "@" + newSocial;
+  "use strict";
+  const newSocial = window.prompt("What is your @?");
+  if (newSocial) {
+    document.getElementById("social").innerHTML = "@" + newSocial;
+  }
 }
 
 function changeClientName() {
-  let newClient = prompt("What is your client's name?");
-  document.getElementById("clientName").innerHTML = "client: " + newClient;
+  "use strict";
+  const newClient = window.prompt("What is your client's name?");
+  if (newClient) {
+    document.getElementById("clientName").innerHTML = "client: " + newClient;
+  }
 }
 
 function changeDateTime() {
-  let Day = prompt("What day is it?");
-  let Month = prompt("What month is it?");
-  let Year = prompt("What year is it?");
-  let newDate = Day + "/" + Month + "/" + Year;
-  document.getElementById("dateTime").innerHTML = newDate;
+  "use strict";
+  const day = window.prompt("What day is it?");
+  const month = window.prompt("What month is it?");
+  const year = window.prompt("What year is it?");
+  if (day && month && year) {
+    const newDate = day + "/" + month + "/" + year;
+    document.getElementById("dateTime").innerHTML = newDate;
+  }
 }
 
 function changePaymentDue() {
-  let dDay = prompt("What day would you like payment by?");
-  let dMonth = prompt("What month would that be?");
-  let dYear = prompt("What year is it?");
-  let newDueDate = dDay + "/" + dMonth + "/" + dYear;
-  document.getElementById("dueDate").innerHTML = "Payment Due: " + newDueDate;
+  "use strict";
+  const dDay = window.prompt("What day would you like payment by?");
+  const dMonth = window.prompt("What month would that be?");
+  const dYear = window.prompt("What year is it?");
+  if (dDay && dMonth && dYear) {
+    const newDueDate = dDay + "/" + dMonth + "/" + dYear;
+    document.getElementById("dueDate").innerHTML = "Payment Due: " + newDueDate;
+  }
 }
 
 function changeInvoiceID() {
-  let invoiceID = prompt("Enter Invoice ID:");
+  "use strict";
+  const invoiceID = window.prompt("Enter Invoice ID:");
   if (invoiceID) {
     document.querySelector(".invoiceIdNumber").innerHTML = invoiceID;
   }
 }
 
 function changeAccountName() {
-  let accountName = prompt("Enter Account Name:");
+  "use strict";
+  const accountName = window.prompt("Enter Account Name:");
   if (accountName) {
     document.querySelector(".accName").innerHTML = accountName;
   }
 }
 
 function changeSortCode() {
-  let sortCode = prompt("Enter Sort Code (6 digits):");
+  "use strict";
+  const sortCode = window.prompt("Enter Sort Code (6 digits):");
   if (sortCode && /^\d{6}$/.test(sortCode)) {
-    let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(
-      2,
-      4
-    )}-${sortCode.slice(4)}`;
+    const formattedSortCode =
+      sortCode.slice(0, 2) +
+      "-" +
+      sortCode.slice(2, 4) +
+      "-" +
+      sortCode.slice(4);
     document.querySelector(".sortCode").innerHTML = formattedSortCode;
   } else {
-    alert("Please enter a valid 6-digit sort code.");
+    window.alert("Please enter a valid 6-digit sort code.");
   }
 }
 
 function changeAccountNumber() {
-  let accountNumber = prompt("Enter Account Number:");
+  "use strict";
+  const accountNumber = window.prompt("Enter Account Number:");
   if (accountNumber) {
     document.querySelector(".accNo").innerHTML = accountNumber;
   }
 }
 
+// Initialize item values and discount rate
 let itemValues = [150, 3750, 75];
 let discountRate = 0;
 
 function changeName1() {
-  let newItem = prompt("What would you like to call Item 1?");
+  "use strict";
+  const newItem = window.prompt("What would you like to call Item 1?");
   if (newItem) {
     document.querySelector(".item1Name").innerHTML = newItem + ":";
   }
 }
 
 function changeName2() {
-  let newItem = prompt("What would you like to call Item 2?");
+  "use strict";
+  const newItem = window.prompt("What would you like to call Item 2?");
   if (newItem) {
     document.querySelector(".item2Name").innerHTML = newItem + ":";
   }
 }
 
 function changeName3() {
-  let newItem = prompt("What would you like to call Item 3?");
+  "use strict";
+  const newItem = window.prompt("What would you like to call Item 3?");
   if (newItem) {
     document.querySelector(".item3Name").innerHTML = newItem + ":";
   }
 }
 
 function changeValue1() {
-  let newValue = prompt("Enter the new value for Item 1:");
-  if (!isNaN(newValue) && newValue !== null) {
+  "use strict";
+  const newValue = window.prompt("Enter the new value for Item 1:");
+  if (newValue !== null && !Number.isNaN(Number(newValue))) {
     itemValues[0] = parseFloat(newValue);
     document.querySelector(".item1Value").innerHTML =
       "£" + itemValues[0].toFixed(2);
@@ -133,8 +170,9 @@ function changeValue1() {
 }
 
 function changeValue2() {
-  let newValue = prompt("Enter the new value for Item 2:");
-  if (!isNaN(newValue) && newValue !== null) {
+  "use strict";
+  const newValue = window.prompt("Enter the new value for Item 2:");
+  if (newValue !== null && !Number.isNaN(Number(newValue))) {
     itemValues[1] = parseFloat(newValue);
     document.querySelector(".item2Value").innerHTML =
       "£" + itemValues[1].toFixed(2);
@@ -143,8 +181,9 @@ function changeValue2() {
 }
 
 function changeValue3() {
-  let newValue = prompt("Enter the new value for Item 3:");
-  if (!isNaN(newValue) && newValue !== null) {
+  "use strict";
+  const newValue = window.prompt("Enter the new value for Item 3:");
+  if (newValue !== null && !Number.isNaN(Number(newValue))) {
     itemValues[2] = parseFloat(newValue);
     document.querySelector(".item3Value").innerHTML =
       "£" + itemValues[2].toFixed(2);
@@ -153,31 +192,41 @@ function changeValue3() {
 }
 
 function changeDiscount() {
-  let newDiscount = prompt("Enter the discount rate (0-99)%:");
-  if (!isNaN(newDiscount) && newDiscount >= 0 && newDiscount <= 99) {
+  "use strict";
+  const newDiscount = window.prompt("Enter the discount rate (0-99)%:");
+  if (
+    newDiscount !== null &&
+    !Number.isNaN(Number(newDiscount)) &&
+    parseFloat(newDiscount) >= 0 &&
+    parseFloat(newDiscount) <= 99
+  ) {
     discountRate = parseFloat(newDiscount);
     updateCalculations();
   } else {
-    alert("Please enter a valid discount rate between 0 and 99.");
+    window.alert("Please enter a valid discount rate between 0 and 99.");
   }
 }
 
 function updateCalculations() {
-  const subtotal = itemValues.reduce((acc, value) => acc + value, 0);
+  "use strict";
+  const subtotal = itemValues.reduce(function (acc, value) {
+    return acc + value;
+  }, 0);
   const discount = (subtotal * discountRate) / 100;
   const vat = (subtotal - discount) * 0.14;
   const total = subtotal - discount + vat;
 
   document.querySelector("#subtotal").innerHTML = "£" + subtotal.toFixed(2);
-  document.querySelector("#discount").innerHTML = `£${discount.toFixed(
-    2
-  )} (${discountRate}%)`;
+  document.querySelector("#discount").innerHTML =
+    "£" + discount.toFixed(2) + " (" + discountRate + "%)";
   document.querySelector("#vat").innerHTML = "£" + vat.toFixed(2);
   document.querySelector("#total").innerHTML = "£" + total.toFixed(2);
 }
 
+// Initialize calculations
 updateCalculations();
 
+// Paper textures for background
 const paperTextureList = [
   "url('images/paper-texture.webp')",
   "url('images/paperTexture.jpeg')",
@@ -198,54 +247,60 @@ const paperTextureList = [
 let i = 0;
 
 function changePaper() {
-  if (i < paperTextureList.length) {
+  "use strict";
+  if (i < paperTextureList.length - 1) {
     i += 1;
-    document.getElementById("invoice-div").style.backgroundImage =
-      paperTextureList[i];
   } else {
     i = 0;
-    document.getElementById("invoice-div").style.backgroundImage =
-      paperTextureList[i];
   }
+  document.getElementById("invoice-div").style.backgroundImage =
+    paperTextureList[i];
 }
 
 function showPopup() {
+  "use strict";
   document.getElementById("popup").style.display = "block";
   document.getElementById("popup-overlay").style.display = "block";
 }
 
 function hidePopup() {
+  "use strict";
   document.getElementById("popup").style.display = "none";
   document.getElementById("popup-overlay").style.display = "none";
 }
 
 function saveInvoiceAsImage() {
+  "use strict";
   const invoiceDiv = document.getElementById("invoice-div");
 
   html2canvas(invoiceDiv, {
     useCORS: true, // Enable Cross-Origin Resource Sharing (CORS)
-    allowTaint: false, // Do not allow tainting of the canvas (important for image security)
+    allowTaint: false, // Do not allow tainting of the canvas
     logging: true, // Enable logging to help debug
   })
-    .then((canvas) => {
+    .then(function (canvas) {
       const imgData = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.href = imgData;
-      link.download = `Invoice_${new Date().toISOString().slice(0, 10)}.png`;
+      link.download =
+        "Invoice_" + new Date().toISOString().slice(0, 10) + ".png";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     })
-    .catch((error) => {
+    .catch(function (error) {
       console.error("Error saving invoice as image:", error);
     });
 }
 
+// Initialize EmailJS
 (function () {
+  "use strict";
   emailjs.init("2Ip3jr8nRZeJ-wIAK");
 })();
 
 function sendInvoice() {
+  "use strict";
   const invoiceDiv = document.getElementById("invoice-div");
 
   const options = {
@@ -256,282 +311,51 @@ function sendInvoice() {
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
 
-  document.fonts.ready.then(() => {
+  document.fonts.ready.then(function () {
     html2canvas(invoiceDiv);
-    function changeName() {
-      let name = prompt("What is your name?");
-      document.getElementById("designerName").innerHTML = "designer: " + name;
-    }
 
-    function changeEmail() {
-      let newEmail = prompt("What is your email?", "email@test.com");
-      document.getElementById("email").innerHTML = newEmail;
-    }
+    html2pdf()
+      .set(options)
+      .from(invoiceDiv)
+      .toPdf()
+      .output("datauristring")
+      .then(function (pdfBase64) {
+        // Remove the data URI prefix to get a pure base64 string
+        const pdfData = pdfBase64.split(",")[1];
 
-    function changeSocial() {
-      let newSocial = prompt("What is your @?");
-      document.getElementById("social").innerHTML = "@" + newSocial;
-    }
+        // Collect data for EmailJS
+        const clientEmail = window.prompt("Enter the client's email:");
+        if (!clientEmail) {
+          window.alert("Email send canceled.");
+          return;
+        }
 
-    function changeClientName() {
-      let newClient = prompt("What is your client's name?");
-      document.getElementById("clientName").innerHTML = "client: " + newClient;
-    }
+        const clientName = document
+          .getElementById("clientName")
+          .textContent.replace("client: ", "");
+        const yourName = document
+          .getElementById("designerName")
+          .textContent.replace("designer: ", "");
+        const invoiceId =
+          document.querySelector(".invoiceIdNumber").textContent;
 
-    function changeDateTime() {
-      let Day = prompt("What day is it?");
-      let Month = prompt("What month is it?");
-      let Year = prompt("What year is it?");
-      let newDate = Day + "/" + Month + "/" + Year;
-      document.getElementById("dateTime").innerHTML = newDate;
-    }
+        const invoiceData = {
+          client_email: clientEmail,
+          client_name: clientName,
+          your_name: yourName,
+          invoice_id: invoiceId,
+          pdf_attachment: pdfData, // Base64-encoded PDF
+        };
 
-    function changePaymentDue() {
-      let dDay = prompt("What day would you like payment by?");
-      let dMonth = prompt("What month would that be?");
-      let dYear = prompt("What year is it?");
-      let newDueDate = dDay + "/" + dMonth + "/" + dYear;
-      document.getElementById("dueDate").innerHTML =
-        "Payment Due: " + newDueDate;
-    }
-
-    function changeInvoiceID() {
-      let invoiceID = prompt("Enter Invoice ID:");
-      if (invoiceID) {
-        document.querySelector(".invoiceIdNumber").innerHTML = invoiceID;
-      }
-    }
-
-    function changeAccountName() {
-      let accountName = prompt("Enter Account Name:");
-      if (accountName) {
-        document.querySelector(".accName").innerHTML = accountName;
-      }
-    }
-
-    function changeSortCode() {
-      let sortCode = prompt("Enter Sort Code (6 digits):");
-      if (sortCode && /^\d{6}$/.test(sortCode)) {
-        let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(
-          2,
-          4
-        )}-${sortCode.slice(4)}`;
-        document.querySelector(".sortCode").innerHTML = formattedSortCode;
-      } else {
-        alert("Please enter a valid 6-digit sort code.");
-      }
-    }
-
-    function changeAccountNumber() {
-      let accountNumber = prompt("Enter Account Number:");
-      if (accountNumber) {
-        document.querySelector(".accNo").innerHTML = accountNumber;
-      }
-    }
-
-    let itemValues = [150, 3750, 75];
-    let discountRate = 0;
-
-    function changeName1() {
-      let newItem = prompt("What would you like to call Item 1?");
-      if (newItem) {
-        document.querySelector(".item1Name").innerHTML = newItem + ":";
-      }
-    }
-
-    function changeName2() {
-      let newItem = prompt("What would you like to call Item 2?");
-      if (newItem) {
-        document.querySelector(".item2Name").innerHTML = newItem + ":";
-      }
-    }
-
-    function changeName3() {
-      let newItem = prompt("What would you like to call Item 3?");
-      if (newItem) {
-        document.querySelector(".item3Name").innerHTML = newItem + ":";
-      }
-    }
-
-    function changeValue1() {
-      let newValue = prompt("Enter the new value for Item 1:");
-      if (!isNaN(newValue) && newValue !== null) {
-        itemValues[0] = parseFloat(newValue);
-        document.querySelector(".item1Value").innerHTML =
-          "£" + itemValues[0].toFixed(2);
-        updateCalculations();
-      }
-    }
-
-    function changeValue2() {
-      let newValue = prompt("Enter the new value for Item 2:");
-      if (!isNaN(newValue) && newValue !== null) {
-        itemValues[1] = parseFloat(newValue);
-        document.querySelector(".item2Value").innerHTML =
-          "£" + itemValues[1].toFixed(2);
-        updateCalculations();
-      }
-    }
-
-    function changeValue3() {
-      let newValue = prompt("Enter the new value for Item 3:");
-      if (!isNaN(newValue) && newValue !== null) {
-        itemValues[2] = parseFloat(newValue);
-        document.querySelector(".item3Value").innerHTML =
-          "£" + itemValues[2].toFixed(2);
-        updateCalculations();
-      }
-    }
-
-    function changeDiscount() {
-      let newDiscount = prompt("Enter the discount rate (0-99)%:");
-      if (!isNaN(newDiscount) && newDiscount >= 0 && newDiscount <= 99) {
-        discountRate = parseFloat(newDiscount);
-        updateCalculations();
-      } else {
-        alert("Please enter a valid discount rate between 0 and 99.");
-      }
-    }
-
-    function updateCalculations() {
-      const subtotal = itemValues.reduce((acc, value) => acc + value, 0);
-      const discount = (subtotal * discountRate) / 100;
-      const vat = (subtotal - discount) * 0.14;
-      const total = subtotal - discount + vat;
-
-      document.querySelector("#subtotal").innerHTML = "£" + subtotal.toFixed(2);
-      document.querySelector("#discount").innerHTML = `£${discount.toFixed(
-        2
-      )} (${discountRate}%)`;
-      document.querySelector("#vat").innerHTML = "£" + vat.toFixed(2);
-      document.querySelector("#total").innerHTML = "£" + total.toFixed(2);
-    }
-
-    updateCalculations();
-
-    const paperTextureList = [
-      "url('images/paper-texture.webp')",
-      "url('images/paperTexture.jpeg')",
-      "url('images/cardboard.webp')",
-      "url('images/colorful.webp')",
-      "url('images/envelope.webp')",
-      "url('images/envelope2.webp')",
-      "url('images/graffitti.webp')",
-      "url('images/holes.webp')",
-      "url('images/lined-paper.webp')",
-      "url('images/paper-texture2.webp')",
-      "url('images/paper-texture2.webp')",
-      "url('images/paper-texture3.webp')",
-      "url('images/receiptOld.webp')",
-      "url('images/stickytape.webp')",
-    ];
-
-    let i = 0;
-
-    function changePaper() {
-      if (i < paperTextureList.length) {
-        i += 1;
-        document.getElementById("invoice-div").style.backgroundImage =
-          paperTextureList[i];
-      } else {
-        i = 0;
-        document.getElementById("invoice-div").style.backgroundImage =
-          paperTextureList[i];
-      }
-    }
-
-    function showPopup() {
-      document.getElementById("popup").style.display = "block";
-      document.getElementById("popup-overlay").style.display = "block";
-    }
-
-    function hidePopup() {
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("popup-overlay").style.display = "none";
-    }
-
-    function saveInvoiceAsImage() {
-      const invoiceDiv = document.getElementById("invoice-div");
-
-      html2canvas(invoiceDiv)
-        .then((canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const link = document.createElement("a");
-          link.href = imgData;
-          link.download = `Invoice_${new Date()
-            .toISOString()
-            .slice(0, 10)}.png`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        })
-        .catch((error) => {
-          console.error("Error saving invoice as image:", error);
-        });
-    }
-
-    (function () {
-      emailjs.init("2Ip3jr8nRZeJ-wIAK"); // Replace with your EmailJS user ID
-    })();
-
-    function sendInvoice() {
-      const invoiceDiv = document.getElementById("invoice-div");
-
-      // Generate PDF
-      const options = {
-        margin: 1,
-        filename: "invoice.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-      };
-
-      document.fonts.ready.then(() => {
-        html2canvas(invoiceDiv)
-          .then((canvas) => {
-            const imgData = canvas.toDataURL("image/png");
-            const pdf = new jsPDF();
-            pdf.addImage(imgData, "PNG", 10, 10, 180, 240);
-            pdf.save("invoice.pdf");
+        emailjs
+          .send("service_nayof0a", "template_410k4yj", invoiceData)
+          .then(function () {
+            window.alert("Invoice sent successfully!");
           })
-          .catch((error) => {
-            console.error("Error capturing the invoice div:", error);
+          .catch(function (error) {
+            window.alert("Failed to send the invoice. Please try again.");
+            console.error("Error sending email:", error);
           });
       });
-
-      html2pdf()
-        .set(options)
-        .from(invoiceDiv)
-        .toPdf()
-        .output("datauristring")
-        .then(function (pdfBase64) {
-          // Remove the data URI prefix to get a pure base64 string
-          const pdfData = pdfBase64.split(",")[1];
-
-          // Collect data for EmailJS
-          const invoiceData = {
-            client_email: prompt("Enter the client's email:"),
-            client_name: document
-              .getElementById("clientName")
-              .textContent.replace("client: ", ""),
-            your_name: document
-              .getElementById("designerName")
-              .textContent.replace("designer: ", ""),
-            invoice_id: document.querySelector(".invoiceIdNumber").textContent,
-            pdf_attachment: pdfData, // Base64-encoded PDF
-          };
-
-          // Send email with PDF attachment
-          emailjs
-            .send("service_nayof0a", "template_410k4yj", invoiceData)
-            .then((response) => {
-              alert("Invoice sent successfully!");
-            })
-            .catch((error) => {
-              alert("Failed to send the invoice. Please try again.");
-              console.error("Error sending email:", error);
-            });
-        });
-    }
   });
 }
