@@ -228,8 +228,8 @@ updateCalculations();
 
 // Paper textures for background
 const paperTextureList = [
-  "url('assets/images/paper-texture.webp')",
-  "url('assets/images/paperTexture.jpeg')",
+  "url('/assets/images/paper-texture.webp')",
+  "url('/assets/images/paperTexture.jpeg')",
   "url('assets/images/cardboard.webp')",
   "url('assets/images/colorful.webp')",
   "url('assets/images/envelope.webp')",
