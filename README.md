@@ -4,29 +4,29 @@
 
 - [Slipstream: A Nostalgic Take on a Modern Invoice Generator](#slipstream-a-nostalgic-take-on-a-modern-invoice-generator)
 - [Target User](#target-user)
-  - [1. Freelancers and Small Business Owners](#1-freelancers-and-small-business-owners)
-  - [2. Casual Users for Personal Use](#2-casual-users-for-personal-use)
+  - [1. Freelancers and Small Business Owners]
+  - [2. Casual Users for Personal Use]
 - [Challenges Solved by Slipstream](#challenges-solved-by-slipstream)
-  - [For Freelancers and Small Business Owners](#for-freelancers-and-small-business-owners)
-  - [How Slipstream Addresses These Challenges](#how-slipstream-addresses-these-challenges)
-  - [For Casual Users](#2-casual-users-for-personal-use-1)
+  - [For Freelancers and Small Business Owners]
+  - [How Slipstream Addresses These Challenges]
+  - [For Casual Users]
 - [Goals and Features](#goals-and-features)
-  - [1. Invoice and Receipt Creation](#1-invoice-and-receipt-creation)
-  - [2. Invoice Viewing and Exporting](#2-invoice-viewing-and-exporting)
-  - [3. Future Goals: User Dashboard & Client Management](#3-future-goals-user-dashboard--client-management)
-  - [4. Recurring Invoicing](#4-recurring-invoicing)
+  - [1. Invoice and Receipt Creation]
+  - [2. Invoice Viewing and Exporting]
+  - [3. Future Goals: User Dashboard & Client Management]
+  - [4. Recurring Invoicing]
 - [Technology Stack](#technology-stack)
-  - [1. Frontend Technologies](#1-frontend-technologies)
-  - [2. Deployment](#2-deployment)
+  - [1. Frontend Technologies]
+  - [2. Deployment]
 - [API Usage](#api-usage)
-  - [1. HTML2CANVAS](#1-html2canvas)
-  - [2. jsPDF](#2-jspdf)
-  - [Future API Integration](#1-future-api-integration)
+  - [1. HTML2CANVAS]
+  - [2. jsPDF]
+  - [Future API Integration]
 - [Challenges and Solutions](#challenges-and-solutions)
-  - [1. Development Challenges](#1-development-challenges)
-  - [2. Design & Styling](#2-design--styling)
-  - [3. Performance](#3-performance)
-  - [4. Future Improvements](#4-future-improvements)
+  - [1. Development Challenges]
+  - [2. Design & Styling]
+  - [3. Performance]
+  - [4. Future Improvements]
 - [Design Decisions](#design-decisions)
   - [Sitemap and Wireframes](#sitemap-and-wireframes)
   - [Color Scheme](#color-scheme)
