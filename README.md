@@ -1033,6 +1033,16 @@ Lessons Learned: Gather feedback and insights to improve future testing cycles.
 
 </p>
 
+<h3>JsLint testing</h3>
+
+<img width="1440" alt="Screenshot 2025-03-14 at 10 37 36" src="https://github.com/user-attachments/assets/74533b13-ee1a-4c42-8347-5c1eb8cbb655" />
+
+<p>The only remaining JsLint warnings are for trailing whitespace</p>
+
+<img width="1374" alt="Screenshot 2025-03-14 at 10 37 46" src="https://github.com/user-attachments/assets/2dd0f35d-6da1-4bb1-9a6c-46c801f6b7ee" />
+
+
+
 <h3>Responsivness</h3>
 <p>
   Utilized Chrome dev tools as well as https://responsivedesignchecker.com/ to
