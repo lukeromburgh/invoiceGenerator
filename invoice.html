@@ -44,70 +44,15 @@
       <h2>Graphic Design Invoice</h2>
 
       <h3 onclick="changeName()" id="designerName">designer: name</h3>
-      <script>
-        function changeName() {
-          let name = prompt("What is your name?");
-          document.getElementById("designerName").innerHTML =
-            "designer: " + name;
-        }
-      </script>
-
       <h3 onclick="changeEmail()" id="email">email@address.com</h3>
-      <script>
-        function changeEmail() {
-          let newEmail = prompt("What is your email?", "email@test.com");
-          document.getElementById("email").innerHTML = newEmail;
-        }
-      </script>
-
       <h3 onclick="changeSocial()" id="social">@social</h3>
-      <script>
-        function changeSocial() {
-          let newSocial = prompt("What is your @?");
-          document.getElementById("social").innerHTML = "@" + newSocial;
-        }
-      </script>
-
       <h3 onclick="changeClientName()" id="clientName" class="newInvoiceGroup">
         client: name
       </h3>
-      <script>
-        function changeClientName() {
-          let newClient = prompt("What is your client's name?");
-          document.getElementById("clientName").innerHTML =
-            "client: " + newClient;
-        }
-      </script>
-
       <h3 onclick="changeDateTime()" id="dateTime" class="newInvoiceGroup">
         Tue 17/09/2024 - 01:43 PM
       </h3>
-      <script>
-        function changeDateTime() {
-          let Day = prompt("What day is it?");
-          let Month = prompt("What month is it?");
-          let Year = prompt("What year is it?");
-
-          let newDate = Day + "/" + Month + "/" + Year;
-
-          document.getElementById("dateTime").innerHTML = newDate;
-        }
-      </script>
-
       <h3 onclick="changePaymentDue()" id="dueDate">Payment Due: 12/10/2024</h3>
-      <script>
-        function changePaymentDue() {
-          let dDay = prompt("What day would you like payment by?");
-          let dMonth = prompt("What month would that be?");
-          let dYear = prompt("What year is it?");
-
-          let newDueDate = dDay + "/" + dMonth + "/" + dYear;
-
-          document.getElementById("dueDate").innerHTML =
-            "Payment Due: " + newDueDate;
-        }
-      </script>
-
       <h3 class="newInvoiceGroup">--</h3>
 
       <div id="leftRightGroup">
@@ -115,14 +60,6 @@
         <h3 onClick="changeInvoiceID()" class="invoiceIdNumber" id="right">
           #0053190
         </h3>
-        <script>
-          function changeInvoiceID() {
-            let invoiceID = prompt("Enter Invoice ID:");
-            if (invoiceID) {
-              document.querySelector(".invoiceIdNumber").innerHTML = invoiceID;
-            }
-          }
-        </script>
       </div>
 
       <div id="leftRightGroup">
@@ -130,34 +67,11 @@
         <h3 onClick="changeAccountName()" class="accName" id="right">
           Name Surname
         </h3>
-        <script>
-          function changeAccountName() {
-            let accountName = prompt("Enter Account Name:");
-            if (accountName) {
-              document.querySelector(".accName").innerHTML = accountName;
-            }
-          }
-        </script>
       </div>
 
       <div id="leftRightGroup">
         <h3 id="left">Sort Code:</h3>
         <h3 onClick="changeSortCode()" class="sortCode" id="right">00-00-00</h3>
-        <script>
-          function changeSortCode() {
-            let sortCode = prompt("Enter Sort Code (6 digits):");
-            if (sortCode && /^\d{6}$/.test(sortCode)) {
-              // Validate input is 6 digits
-              let formattedSortCode = `${sortCode.slice(0, 2)}-${sortCode.slice(
-                2,
-                4
-              )}-${sortCode.slice(4)}`;
-              document.querySelector(".sortCode").innerHTML = formattedSortCode;
-            } else {
-              alert("Please enter a valid 6-digit sort code.");
-            }
-          }
-        </script>
       </div>
 
       <div id="leftRightGroup">
@@ -165,14 +79,6 @@
         <h3 onClick="changeAccountNumber()" class="accNo" id="right">
           12345678
         </h3>
-        <script>
-          function changeAccountNumber() {
-            let accountNumber = prompt("Enter Account Number:");
-            if (accountNumber) {
-              document.querySelector(".accNo").innerHTML = accountNumber;
-            }
-          }
-        </script>
       </div>
 
       <h3 class="newInvoiceGroup">--</h3>
@@ -216,90 +122,6 @@
         <h3 id="total" class="right" style="margin-right: 30px">£4,531.50</h3>
       </div>
 
-      <script>
-        let itemValues = [150, 3750, 75]; // Default values
-        let discountRate = 0; // Default discount rate in %
-
-        // Functions to update item names
-        function changeName1() {
-          let newItem = prompt("What would you like to call Item 1?");
-          if (newItem) {
-            document.querySelector(".item1Name").innerHTML = newItem + ":";
-          }
-        }
-        function changeName2() {
-          let newItem = prompt("What would you like to call Item 2?");
-          if (newItem) {
-            document.querySelector(".item2Name").innerHTML = newItem + ":";
-          }
-        }
-        function changeName3() {
-          let newItem = prompt("What would you like to call Item 3?");
-          if (newItem) {
-            document.querySelector(".item3Name").innerHTML = newItem + ":";
-          }
-        }
-
-        // Functions to update item values
-        function changeValue1() {
-          let newValue = prompt("Enter the new value for Item 1:");
-          if (!isNaN(newValue) && newValue !== null) {
-            itemValues[0] = parseFloat(newValue);
-            document.querySelector(".item1Value").innerHTML =
-              "£" + itemValues[0].toFixed(2);
-            updateCalculations();
-          }
-        }
-        function changeValue2() {
-          let newValue = prompt("Enter the new value for Item 2:");
-          if (!isNaN(newValue) && newValue !== null) {
-            itemValues[1] = parseFloat(newValue);
-            document.querySelector(".item2Value").innerHTML =
-              "£" + itemValues[1].toFixed(2);
-            updateCalculations();
-          }
-        }
-        function changeValue3() {
-          let newValue = prompt("Enter the new value for Item 3:");
-          if (!isNaN(newValue) && newValue !== null) {
-            itemValues[2] = parseFloat(newValue);
-            document.querySelector(".item3Value").innerHTML =
-              "£" + itemValues[2].toFixed(2);
-            updateCalculations();
-          }
-        }
-
-        // Function to update the discount
-        function changeDiscount() {
-          let newDiscount = prompt("Enter the discount rate (0-99)%:");
-          if (!isNaN(newDiscount) && newDiscount >= 0 && newDiscount <= 99) {
-            discountRate = parseFloat(newDiscount);
-            updateCalculations();
-          } else {
-            alert("Please enter a valid discount rate between 0 and 99.");
-          }
-        }
-
-        // Function to calculate and update subtotal, VAT, and total
-        function updateCalculations() {
-          const subtotal = itemValues.reduce((acc, value) => acc + value, 0);
-          const discount = (subtotal * discountRate) / 100;
-          const vat = (subtotal - discount) * 0.14;
-          const total = subtotal - discount + vat;
-
-          document.querySelector("#subtotal").innerHTML =
-            "£" + subtotal.toFixed(2);
-          document.querySelector("#discount").innerHTML = `£${discount.toFixed(
-            2
-          )} (${discountRate}%)`;
-          document.querySelector("#vat").innerHTML = "£" + vat.toFixed(2);
-          document.querySelector("#total").innerHTML = "£" + total.toFixed(2);
-        }
-
-        // Initial calculation on load
-        updateCalculations();
-      </script>
-
       <div class="thankYou">
         <h3>
           Thank you for your business! Feel free to contact me for any further
@@ -317,38 +139,6 @@
       >
         Change Paper Texture
       </button>
-      <script>
-        const paperTextureList = [
-          "url('images/paper-texture.webp')",
-          "url('images/paperTexture.jpeg')",
-          "url('images/cardboard.webp')",
-          "url('images/colorful.webp')",
-          "url('images/envelope.webp')",
-          "url('images/envelope2.webp')",
-          "url('images/graffitti.webp')",
-          "url('images/holes.webp')",
-          "url('images/lined-paper.webp')",
-          "url('images/paper-texture2.webp')",
-          "url('images/paper-texture2.webp')",
-          "url('images/paper-texture3.webp')",
-          "url('images/receiptOld.webp')",
-          "url('images/stickytape.webp')",
-        ];
-
-        let i = 0;
-
-        function changePaper() {
-          if (i < paperTextureList.length) {
-            i += 1;
-            document.getElementById("invoice-div").style.backgroundImage =
-              paperTextureList[i];
-          } else {
-            i = 0;
-            document.getElementById("invoice-div").style.backgroundImage =
-              paperTextureList[i];
-          }
-        }
-      </script>
 
       <button
         onclick="showPopup()"
@@ -384,21 +174,6 @@
         <button onclick="hidePopup()">Close</button>
       </div>
 
-      <!-- JavaScript for handling the pop-up -->
-      <script>
-        // Show the pop-up
-        function showPopup() {
-          document.getElementById("popup").style.display = "block";
-          document.getElementById("popup-overlay").style.display = "block";
-        }
-
-        // Hide the pop-up
-        function hidePopup() {
-          document.getElementById("popup").style.display = "none";
-          document.getElementById("popup-overlay").style.display = "none";
-        }
-      </script>
-
       <button onclick="sendInvoice()" class="btn btn-primary btn-invoice">
         Save as PDF
       </button>
@@ -410,119 +185,6 @@
       >
         Save Invoice
       </button>
-
-      <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="https://html2canvas.hertzen.com/dist/html2canvas.js"
-      ></script>
-
-      <script>
-        //Create PDf from HTML...
-        function saveInvoiceAsImage() {
-          const invoiceDiv = document.getElementById("invoice-div");
-
-          // Use html2canvas to capture the div
-          html2canvas(invoiceDiv)
-            .then((canvas) => {
-              // Convert canvas to an image
-              const imgData = canvas.toDataURL("image/png");
-
-              // Create a link element
-              const link = document.createElement("a");
-              link.href = imgData;
-
-              // Specify download filename
-              link.download = `Invoice_${new Date()
-                .toISOString()
-                .slice(0, 10)}.png`;
-
-              // Programmatically trigger click
-              document.body.appendChild(link);
-              link.click();
-
-              // Remove the link after download
-              document.body.removeChild(link);
-            })
-            .catch((error) => {
-              console.error("Error saving invoice as image:", error);
-            });
-        }
-      </script>
-
-      <!---------------------------    EmailJS Scripts    ---------------------------------->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-      <script>
-        // Initialize EmailJS
-        (function () {
-          emailjs.init("2Ip3jr8nRZeJ-wIAK"); // Replace with your EmailJS user ID
-        })();
-
-        function sendInvoice() {
-          const invoiceDiv = document.getElementById("invoice-div");
-
-          // Generate PDF
-          const options = {
-            margin: 1,
-            filename: "invoice.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-          };
-
-          document.fonts.ready.then(() => {
-            html2canvas(invoiceDiv)
-              .then((canvas) => {
-                const imgData = canvas.toDataURL("image/png");
-                const pdf = new jsPDF();
-                pdf.addImage(imgData, "PNG", 10, 10, 180, 240);
-                pdf.save("invoice.pdf");
-              })
-              .catch((error) => {
-                console.error("Error capturing the invoice div:", error);
-              });
-          });
-
-          html2pdf()
-            .set(options)
-            .from(invoiceDiv)
-            .toPdf()
-            .output("datauristring")
-            .then(function (pdfBase64) {
-              // Remove the data URI prefix to get a pure base64 string
-              const pdfData = pdfBase64.split(",")[1];
-
-              // Collect data for EmailJS
-              const invoiceData = {
-                client_email: prompt("Enter the client's email:"),
-                client_name: document
-                  .getElementById("clientName")
-                  .textContent.replace("client: ", ""),
-                your_name: document
-                  .getElementById("designerName")
-                  .textContent.replace("designer: ", ""),
-                invoice_id:
-                  document.querySelector(".invoiceIdNumber").textContent,
-                pdf_attachment: pdfData, // Base64-encoded PDF
-              };
-
-              // Send email with PDF attachment
-              emailjs
-                .send("service_nayof0a", "template_410k4yj", invoiceData)
-                .then((response) => {
-                  alert("Invoice sent successfully!");
-                })
-                .catch((error) => {
-                  alert("Failed to send the invoice. Please try again.");
-                  console.error("Error sending email:", error);
-                });
-            });
-        }
-      </script>
     </div>
 
     <footer class="footer">
@@ -565,5 +227,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
