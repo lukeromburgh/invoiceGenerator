@@ -228,20 +228,20 @@ updateCalculations();
 
 // Paper textures for background
 const paperTextureList = [
-  "url('images/paper-texture.webp')",
-  "url('images/paperTexture.jpeg')",
-  "url('images/cardboard.webp')",
-  "url('images/colorful.webp')",
-  "url('images/envelope.webp')",
-  "url('images/envelope2.webp')",
-  "url('images/graffitti.webp')",
-  "url('images/holes.webp')",
-  "url('images/lined-paper.webp')",
-  "url('images/paper-texture2.webp')",
-  "url('images/paper-texture2.webp')",
-  "url('images/paper-texture3.webp')",
-  "url('images/receiptOld.webp')",
-  "url('images/stickytape.webp')",
+  "url('assets/images/paper-texture.webp')",
+  "url('assets/images/paperTexture.jpeg')",
+  "url('assets/images/cardboard.webp')",
+  "url('assets/images/colorful.webp')",
+  "url('assets/images/envelope.webp')",
+  "url('assets/images/envelope2.webp')",
+  "url('assets/images/graffitti.webp')",
+  "url('assets/images/holes.webp')",
+  "url('assets/images/lined-paper.webp')",
+  "url('assets/images/paper-texture2.webp')",
+  "url('assets/images/paper-texture2.webp')",
+  "url('assets/images/paper-texture3.webp')",
+  "url('assets/images/receiptOld.webp')",
+  "url('assets/images/stickytape.webp')",
 ];
 
 let i = 0;
