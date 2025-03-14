@@ -1,5 +1,86 @@
 <h1>Slipstream: A Nostalgic Take on a Modern Invoice Generator</h1>
 
+# Table of Contents
+
+- [Slipstream: A Nostalgic Take on a Modern Invoice Generator](#slipstream-a-nostalgic-take-on-a-modern-invoice-generator)
+- [Target User](#target-user)
+  - [1. Freelancers and Small Business Owners](#1-freelancers-and-small-business-owners)
+  - [2. Casual Users for Personal Use](#2-casual-users-for-personal-use)
+- [Challenges Solved by Slipstream](#challenges-solved-by-slipstream)
+  - [For Freelancers and Small Business Owners](#for-freelancers-and-small-business-owners)
+  - [How Slipstream Addresses These Challenges](#how-slipstream-addresses-these-challenges)
+  - [For Casual Users](#2-casual-users-for-personal-use-1)
+- [Goals and Features](#goals-and-features)
+  - [1. Invoice and Receipt Creation](#1-invoice-and-receipt-creation)
+  - [2. Invoice Viewing and Exporting](#2-invoice-viewing-and-exporting)
+  - [3. Future Goals: User Dashboard & Client Management](#3-future-goals-user-dashboard--client-management)
+  - [4. Recurring Invoicing](#4-recurring-invoicing)
+- [Technology Stack](#technology-stack)
+  - [1. Frontend Technologies](#1-frontend-technologies)
+  - [2. Deployment](#2-deployment)
+- [API Usage](#api-usage)
+  - [1. HTML2CANVAS](#1-html2canvas)
+  - [2. jsPDF](#2-jspdf)
+  - [Future API Integration](#1-future-api-integration)
+- [Challenges and Solutions](#challenges-and-solutions)
+  - [1. Development Challenges](#1-development-challenges)
+  - [2. Design & Styling](#2-design--styling)
+  - [3. Performance](#3-performance)
+  - [4. Future Improvements](#4-future-improvements)
+- [Design Decisions](#design-decisions)
+  - [Sitemap and Wireframes](#sitemap-and-wireframes)
+  - [Color Scheme](#color-scheme)
+  - [Typography](#typography)
+  - [Favicon](#favicon)
+  - [Error 404 page](#error-404-page)
+  - [Accessibility Features](#accessibility-features)
+- [Goals in Development](#goals-i-aimed-to-achieve-in-development)
+  - [Project Goals](#project-goals)
+  - [User Goals](#user-goals)
+  - [Site Owner Goals](#site-owner-goals)
+  - [Developer Goals](#developer-goals)
+  - [User Stories](#user-stories)
+  - [First Time Visitor Goals](#first-time-visitor-goals)
+  - [Returning Visitor Goals](#returning-visitor-goals)
+  - [Frequent Visitor Goals](#frequent-visitor-goals)
+- [Five Planes of UX](#five-planes-of-ux)
+  - [Strategy](#strategy)
+  - [Scope](#scope)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+  - [Surface](#surface)
+- [Viability and Feasibility](#viability-and-feasibility)
+  - [Technical Feasibility](#technical-feasibility)
+  - [Business Feasibility](#business-feasibility)
+- [Content Requirements](#content-requirements)
+  - [Navigation Bar](#section-navigation-bar)
+  - [Footer](#section-footer)
+  - [Homepage](#webpage-homepage)
+  - [How to Use](#popup-how-to-use)
+  - [404 Page](#webpage-404)
+- [Structure](#structure-1)
+  - [Overall Structure](#overall-structure)
+  - [Information Architecture](#information-architecture)
+  - [Interactive Experience](#interactive-experience)
+- [Changes During Development](#changes-during-development)
+  - [Results Modal](#results-modal)
+  - [404 Page Message](#404-page-message)
+- [Testing](#testing)
+  - [Responsiveness](#responsivness)
+  - [Lighthouse Testing](#lighthouse-testing)
+  - [Bugs](#bugs)
+  - [Mistakes](#mistakes)
+- [Deployment](#deployment)
+  - [Deployment to GitHub Pages](#deployment-to-github-pages)
+  - [Steps for Local Deployment](#steps-for-local-deployment)
+  - [Forking the Repository](#forking-the-repository)
+  - [Handling Navigation Errors](#handling-navigation-errors)
+- [Credits](#credits)
+  - [Documentation](#documentation)
+  - [Media](#media)
+  - [Code](#code)
+  - [Acknowledgements](#acknowledgements)
+
 <p>
   Slipstream is a sleek and modern invoice generator designed to help users
   create and share visually appealing invoices. Styled as nostalgic physical
@@ -19,7 +100,7 @@ payments.
   src="https://github.com/user-attachments/assets/922ee42b-87d1-4a81-8481-4061c475070a"
 />
 
-<h2>Target User</h2>
+<h2 id="target-user">Target User</h2>
 <p>
   Slipstream serves a diverse range of users with distinct needs and challenges,
   effectively bridging professional and casual invoicing.
@@ -80,7 +161,7 @@ unconventional way.
   interactions effortlessly.
 </ol>
 
-<h2>Challenges Solved by Slipstream</h2>
+<h2 id="challenges-solved-by-slipstream">Challenges Solved by Slipstream</h2>
 
 <h3>For Freelancers and Small Business Owners</h3>
 Freelancers and small businesses often face these hurdles when dealing with
@@ -146,7 +227,7 @@ unconventional way.
   interactions effortlessly.
 </ol>
 
-<h2>Goals and Features</h2>
+<h2 id="goals-and-features">Goals and Features</h2>
 
 <p>
   Slipstream is a versatile tool designed to make invoicing simpler, more
@@ -239,7 +320,7 @@ unconventional way.
   invoicing tool for a wider audience.
 </p>
 
-<h2>Technology Stack</h2>
+<h2 id="technology-stack">Technology Stack</h2>
 <p>
   Slipstream leverages a range of modern web technologies to deliver a smooth,
   responsive, and highly customizable invoicing experience. Below is a breakdown
@@ -283,7 +364,7 @@ unconventional way.
   medium-scale projects.
 </p>
 
-<h2>API Usage</h2>
+<h2 id="api-usage">API Usage</h2>
 <p>
   While Slipstream operates mainly on the frontend with JavaScript, it leverages
   two powerful APIs—<strong>HTML2CANVAS</strong> and <strong>jsPDF</strong>—to
@@ -391,7 +472,7 @@ unconventional way.
   </li>
 </ul>
 
-<h2>Challenges and Solutions</h2>
+<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
 <p>
   Throughout the development of Slipstream, I encountered several challenges
   related to both the technical implementation and the overall design.
@@ -555,7 +636,7 @@ unconventional way.
     src="https://github.com/user-attachments/assets/cc744af1-45ef-40bc-b4e8-8fe471c25eca"
   />
 
-  <img
+<img
     width="250"
     alt="Screenshot 2024-12-16 at 13 15 48"
     src="https://github.com/user-attachments/assets/00137116-cb1c-40b1-a3ba-6b474721a337"
@@ -689,7 +770,7 @@ unconventional way.
   </ul>
 </section>
 
-<h1>Goals I Aimed to achieve in development</h1>
+<h1 id="goals-i-aimed-to-achieve-in-development">Goals I Aimed to achieve in development</h1>
 
 <h2>Project Goals</h2>
 <p>
@@ -772,7 +853,7 @@ unconventional way.
   <li>Integrate the invoice tool into their business workflow.</li>
 </ul>
 
-<h2>Five Planes of UX</h2>
+<h2 id="five-planes-of-ux">Five Planes of UX</h2>
 <h3>Strategy</h3>
 <p>
   The site is aimed at both professionals and personal users, with simple yet
@@ -804,7 +885,7 @@ unconventional way.
   dynamic text).
 </p>
 
-<h2>Viability and Feasibility</h2>
+<h2 id="viability-and-feasibility">Viability and Feasibility</h2>
 <h3>Technical feasibility</h3>
 <p>
   The project uses HTML, CSS, JavaScript, and external libraries (e.g., jsPDF
@@ -814,17 +895,18 @@ unconventional way.
 <h3>Business feasibility</h3>
 <p>The tool is free and can attract users with easy-to-use features.</p>
 
-<h2>Content Requirements</h2>
+<h2 id="content-requirements">Content Requirements</h2>
 <h3>Section: Navigation Bar</h3>
 <p>
   A sticky navigation bar that links to the homepage, invoice page, and pricing
   page. Includes a logo and links to key sections.
 
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 45 51"
     src="https://github.com/user-attachments/assets/64dfc6ef-4045-4179-baeb-bb8aa778584f"
   />
+
 </p>
 
 <h3>Section: Footer</h3>
@@ -853,11 +935,12 @@ unconventional way.
   Step-by-step instructions for using the invoice generator. Provides guidance
   on how to customize fields and download the invoice.
 
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 47 55"
     src="https://github.com/user-attachments/assets/4e11e732-e507-481d-ba9b-24042d395e06"
   />
+
 </p>
 
 <h3>Webpage: 404</h3>
@@ -865,14 +948,15 @@ unconventional way.
   Custom 404-page guiding users back to the homepage or offering links to key
   pages.
 
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 28 41"
     src="https://github.com/user-attachments/assets/b6dc2972-ee21-42b9-9be7-8a72f7356a00"
   />
+
 </p>
 
-<h2>Structure</h2>
+<h2 id="structure-1">Structure</h2>
 <h3>Overall Structure</h3>
 <p>
   The site is structured with a homepage, an invoice generator, a pricing page,
@@ -892,7 +976,7 @@ unconventional way.
   reset button enhance the user experience.
 </p>
 
-<h2>Changes During Development</h2>
+<h2 id="changes-during-development">Changes During Development</h2>
 <p>
   Adjustments were made to ensure responsiveness and improve the layout of the
   invoice generator. Modified the "Start Free" button to be more visible on
@@ -905,7 +989,7 @@ unconventional way.
 <h3>404 Page Message</h3>
 <p>A custom error message that guides users back to the homepage.</p>
 
-<h1>Testing</h1>
+<h1 id="testing">Testing</h1>
 <p>
   Extensive testing was conducted for all interactive elements, including forms,
   modals, and responsive design.
@@ -946,7 +1030,7 @@ Test Closure:
 
 Review and Document Results: Summarize the testing efforts, detailing what was tested, what defects were found, and overall software quality.
 Lessons Learned: Gather feedback and insights to improve future testing cycles.
-  
+
 </p>
 
 <h3>Responsivness</h3>
@@ -955,26 +1039,27 @@ Lessons Learned: Gather feedback and insights to improve future testing cycles.
   check responsiveness of all my web pages and to ensure that the website was
   functional across all screen sizes.
 
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 55 27"
     src="https://github.com/user-attachments/assets/79105195-84bc-4905-acbd-d600468cf053"
   />
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 55 48"
     src="https://github.com/user-attachments/assets/8ae006f7-c6ed-4656-9527-305b4be896ca"
   />
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 55 53"
     src="https://github.com/user-attachments/assets/8ed356cb-ef27-43f3-94c6-0111bb885b17"
   />
-  <img
+<img
     width="1440"
     alt="Screenshot 2024-12-16 at 15 59 26"
     src="https://github.com/user-attachments/assets/74a0f739-76db-4644-bdd0-8c2201ce3e1e"
   />
+
 </p>
 
 <h3>Lighthouse Testing</h3>
@@ -1050,7 +1135,6 @@ Lessons Learned: Gather feedback and insights to improve future testing cycles.
 </p>
 <img width="1440" alt="Screenshot 2024-12-17 at 20 05 41" src="https://github.com/user-attachments/assets/fb51b501-d4cf-4c46-aa1d-38df246b8430" />
 <p>No HTML errors were found when testing.</p>
-
 
 <h3>Bugs</h3>
 <p>
