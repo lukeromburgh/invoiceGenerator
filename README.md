@@ -642,6 +642,10 @@ unconventional way.
     src="https://github.com/user-attachments/assets/00137116-cb1c-40b1-a3ba-6b474721a337"
   />
 
+  https://ibb.co/S44S74SC
+
+  https://ibb.co/Ndm4Xcq9
+
   <h3>Color Scheme</h3>
   <p>
     Slipstream features a sleek and modern color palette that sets the tone for
